@@ -1,3 +1,15 @@
 {
+    "drawer": {
+        "soarTask": "Soar Task",
+        "dashboard": "Dashboard",
+        "transactions": "Transactions",
+        "accounts": "Accounts",
+        "investments": "Investments",
+        "creditCards": "Credit Cards",
+        "loans": "Loans",
+        "services": "Services",
+        "myPrivileges": "My Privileges",
+        "settings": "Settings"
+    },
     "overview": "Overview"
 }

@@ -1,3 +1,15 @@
 {
+    "drawer": {
+        "soarTask": "Teste da Soar",
+        "dashboard": "Painel de Controle",
+        "transactions": "Transações",
+        "accounts": "Contas",
+        "investments": "Investimentos",
+        "creditCards": "Cartões de Crédito",
+        "loans": "Empréstimos",
+        "services": "Serviços",
+        "myPrivileges": "Meus Privilégios",
+        "settings": "Configurações"
+    },
     "overview": "Visão geral"
 }
