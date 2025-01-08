@@ -1,5 +1,7 @@
+import { inter, lato } from "@/fonts";
 import AppProvidersLoader from "@/providers/AppProviders";
 import type { Metadata } from "next";
+import { useMemo } from "react";
 
 export const metadata: Metadata = {
   title: "Soar",
@@ -11,9 +13,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const fontsClassName = useMemo<string>(
+    () => `${inter.variable} ${lato.variable}`,
+    []
+  );
+
   return (
     <html lang="en">
-      <body>
+      <body className={fontsClassName}>
         <AppProvidersLoader>{children}</AppProvidersLoader>
       </body>
     </html>
