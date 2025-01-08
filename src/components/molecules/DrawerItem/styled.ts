@@ -16,6 +16,7 @@ export const Container = styled(ListItem)(({ theme }) => ({
   alignItems: "center",
   width: "100%",
   position: "relative",
+  cursor: "pointer",
   padding: useMediaQuery(theme.breakpoints.down("md"))
     ? `${theme.spacing(2.3)} ${theme.spacing(5)} ${theme.spacing(
         2.3

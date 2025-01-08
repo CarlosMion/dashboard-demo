@@ -6,6 +6,7 @@ export const inter = Inter({
   preload: true,
   weight: ["400", "500", "600", "700", "900"],
   style: "normal",
+  subsets: ["latin"],
 });
 
 export const lato = Lato({
@@ -14,6 +15,7 @@ export const lato = Lato({
   preload: true,
   weight: ["400", "700"],
   style: "normal",
+  subsets: ["latin"],
 });
 
 export const FONT_VAR_INTER = "var(--font-inter)";

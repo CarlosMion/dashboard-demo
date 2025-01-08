@@ -38,10 +38,10 @@ export const routes = asUrlInfos({
 
 export function generatePath(
   path: string,
-  params: { [key: string]: string | number }
+  params?: { [key: string]: string | number }
 ): string {
   return path.replace(/:([a-zA-Z]+)/g, (_, key) => {
-    if (params[key] !== undefined) {
+    if (!!params?.[key]) {
       return encodeURIComponent(params[key]);
     }
     throw new Error(`Missing parameter: ${key}`);

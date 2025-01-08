@@ -6,6 +6,8 @@ import Drawer from "@mui/material/Drawer";
 
 export const MainContainer = styled(Container)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
+  height: "100%",
+  width: "100%",
 }));
 
 export const StyledDrawer = styled(Drawer)(({ theme }) => ({

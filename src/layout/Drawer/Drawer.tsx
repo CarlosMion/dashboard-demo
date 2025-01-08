@@ -7,7 +7,7 @@ import DashboardItem from "@/components/molecules/DrawerItem";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
-import { routes } from "@/routes";
+import { generatePath, routes } from "@/routes";
 
 interface DrawerProps {
   isOpen?: boolean;
@@ -22,10 +22,52 @@ export default function Drawer({ isOpen = false }: DrawerProps) {
   console.log(">> urlPathname", urlPathname);
   console.log(">> locale", locale);
 
-  const activeTab = useMemo<string>(
-    () => urlPathname.replace(locale, ""),
-    [urlPathname, locale]
+  const homeUrl = useMemo<string>(
+    () => `${generatePath(routes.home.url)}${locale}`,
+    [locale]
   );
+
+  const transactionsUrl = useMemo<string>(
+    () => `/${locale}${generatePath(routes.transactions.url)}`,
+    [locale]
+  );
+
+  const accountsUrl = useMemo<string>(
+    () => `/${locale}${generatePath(routes.accounts.url)}`,
+    [locale]
+  );
+
+  const investmentsUrl = useMemo<string>(
+    () => `/${locale}${generatePath(routes.investments.url)}`,
+    [locale]
+  );
+
+  const creditCardsUrl = useMemo<string>(
+    () => `/${locale}${generatePath(routes.creditCards.url)}`,
+    [locale]
+  );
+
+  const loansUrl = useMemo<string>(
+    () => `/${locale}${generatePath(routes.loans.url)}`,
+    [locale]
+  );
+
+  const servicesUrl = useMemo<string>(
+    () => `/${locale}${generatePath(routes.services.url)}`,
+    [locale]
+  );
+
+  const myPrivilegesUrl = useMemo<string>(
+    () => `/${locale}${generatePath(routes.myPrivileges.url)}`,
+    [locale]
+  );
+
+  const settingsUrl = useMemo<string>(
+    () => `/${locale}${generatePath(routes.settings.url)}`,
+    [locale]
+  );
+
+  const activeTab = useMemo<string>(() => urlPathname, [urlPathname]);
 
   console.log(">> activeTab", activeTab);
 
@@ -36,47 +78,56 @@ export default function Drawer({ isOpen = false }: DrawerProps) {
         <DashboardItem
           icon="HomeIcon"
           title={t("dashboard")}
-          isActive={activeTab === routes.home.url}
+          path={homeUrl}
+          isActive={activeTab === homeUrl}
         />
         <DashboardItem
           icon="TransactionsIcon"
           title={t("transactions")}
-          isActive={activeTab === routes.transactions.url}
+          path={transactionsUrl}
+          isActive={activeTab === transactionsUrl}
         />
         <DashboardItem
           icon="AccountsIcon"
           title={t("accounts")}
-          isActive={activeTab === routes.accounts.url}
+          path={accountsUrl}
+          isActive={activeTab === accountsUrl}
         />
         <DashboardItem
           icon="InvestmentsIcon"
           title={t("investments")}
-          isActive={activeTab === routes.investments.url}
+          path={investmentsUrl}
+          isActive={activeTab === investmentsUrl}
         />
         <DashboardItem
           icon="CreditCardIcon"
           title={t("creditCards")}
-          isActive={activeTab === routes.creditCards.url}
+          path={creditCardsUrl}
+          isActive={activeTab === creditCardsUrl}
         />
         <DashboardItem
           icon="LoansIcon"
           title={t("loans")}
-          isActive={activeTab === routes.loans.url}
+          path={loansUrl}
+          isActive={activeTab === loansUrl}
         />
         <DashboardItem
           icon="ServicesIcon"
           title={t("services")}
-          isActive={activeTab === routes.services.url}
+          path={servicesUrl}
+          isActive={activeTab === servicesUrl}
         />
         <DashboardItem
           icon="PrivilegesIcon"
           title={t("myPrivileges")}
-          isActive={activeTab === routes.myPrivileges.url}
+          path={myPrivilegesUrl}
+          isActive={activeTab === myPrivilegesUrl}
         />
         <DashboardItem
           icon="SettingsSolidIcon"
           title={t("settings")}
-          isActive={activeTab === routes.settings.url}
+          path={settingsUrl}
+          isActive={activeTab === settingsUrl}
         />
       </List>
     </StyledDrawer>

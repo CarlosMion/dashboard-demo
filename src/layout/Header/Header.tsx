@@ -6,6 +6,6 @@ interface HeaderProps {
   toggleDrawer: () => void;
 }
 // TODO: SHOW LOGIN BUTTON IF USER IS NOT LOGGED IN
-export default function Header({ loggedInUser, toggleDrawer }: HeaderProps) {
+export default function Header({}: HeaderProps) {
   return <Container></Container>;
 }
