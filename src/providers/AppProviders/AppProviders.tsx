@@ -1,5 +1,6 @@
 import { PropsWithChildren } from "react";
 import { AbstractIntlMessages, NextIntlClientProvider } from "next-intl";
+import MUIThemeProvider from "../MUIThemeProvider";
 
 type AppProvidersProps = {
   messages?: AbstractIntlMessages;
@@ -9,10 +10,13 @@ type AppProvidersProps = {
 export default function AppProviders({
   messages,
   children,
+  userAgent,
 }: AppProvidersProps) {
   return (
-    <NextIntlClientProvider messages={messages}>
-      {children}
-    </NextIntlClientProvider>
+    <MUIThemeProvider userAgent={userAgent}>
+      <NextIntlClientProvider messages={messages}>
+        {children}
+      </NextIntlClientProvider>
+    </MUIThemeProvider>
   );
 }
