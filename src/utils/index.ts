@@ -1,1 +1,3 @@
-export { isEdge } from "./userAgentUtils";
+import { isEdge } from "./userAgentUtils";
+
+export { isEdge };

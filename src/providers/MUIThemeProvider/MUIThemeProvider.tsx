@@ -19,10 +19,14 @@ export default function MUIThemeProvider({
     setHydrated(true);
   }, []);
 
+  if (!hydrated) {
+    return null;
+  }
+
   return (
     <ThemeProvider theme={theme}>
-      {hydrated && <CssBaseline />}
-      {hydrated && <GlobalStyles userAgent={userAgent} />}
+      <CssBaseline />
+      <GlobalStyles userAgent={userAgent} />
       {children}
     </ThemeProvider>
   );
