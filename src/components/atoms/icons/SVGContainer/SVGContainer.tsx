@@ -1,10 +1,12 @@
-import { PropsWithChildren } from "react";
-import { Box } from "@mui/material";
+"use client";
+
+import { PropsWithChildren, useMemo } from "react";
+import { Box, Theme, useMediaQuery } from "@mui/material";
 
 interface SVGContainerProps extends PropsWithChildren {
-  width: string | number;
-  height: string | number;
-  fill?: string;
+  width: number;
+  height: number;
+  fill?: string | null;
 }
 
 export default function SVGContainer({
@@ -13,12 +15,26 @@ export default function SVGContainer({
   height,
   fill = "none",
 }: SVGContainerProps) {
+  const isMobile = useMediaQuery((theme: Theme) =>
+    theme.breakpoints.down("md")
+  );
+  console.log(isMobile);
+  const displayWidth = useMemo(
+    () => (isMobile ? (3 * width) / 4 : width),
+    [isMobile, width]
+  );
+  const displayHeight = useMemo(
+    () => (isMobile ? (3 * height) / 4 : height),
+    [isMobile, height]
+  );
   return (
     <Box
-      width={width}
-      height={height}
+      sx={{
+        width: displayWidth,
+        height: displayHeight,
+      }}
       component="svg"
-      fill={fill}
+      fill={fill || undefined}
       viewBox={`0 0 ${width} ${height}`}
       xmlns="http://www.w3.org/2000/svg"
     >

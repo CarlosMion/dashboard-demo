@@ -40,6 +40,7 @@ const palette: PaletteOptions = {
   },
   grey: {
     50: alpha("#9199AF", 0.5),
+    100: "#B1B1B1",
   },
   text: {
     primary: "#232323",
