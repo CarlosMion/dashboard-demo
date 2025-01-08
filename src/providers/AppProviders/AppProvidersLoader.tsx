@@ -3,6 +3,7 @@ import { useMessages } from "next-intl";
 import { PropsWithChildren } from "react";
 
 import AppProviders from "./AppProviders";
+import { MainLayout } from "@/layout";
 
 export default async function AppProvidersLoader({
   children,
@@ -28,7 +29,7 @@ function AppProvidersLoaderInternal({
 
   return (
     <AppProviders messages={messages} userAgent={userAgent}>
-      {children}
+      <MainLayout loggedInUser={undefined}>{children}</MainLayout>
     </AppProviders>
   );
 }

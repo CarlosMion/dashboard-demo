@@ -4,7 +4,7 @@ export const inter = Inter({
   variable: "--font-inter",
   display: "swap",
   preload: true,
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "900"],
   style: "normal",
 });
 
