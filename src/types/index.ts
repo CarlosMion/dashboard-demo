@@ -3,13 +3,13 @@ export interface User {
   fullName: string;
   userName: string;
   email: string;
+  password: string;
+  headline: string;
   birthDate: string;
   currentAddress: string;
   permanentAddress: string;
   city: string;
   postalCode: string;
   country: string;
-  role: string;
-  avatar: string;
   profilePictureUrl?: string;
 }

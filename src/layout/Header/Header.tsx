@@ -1,11 +1,93 @@
-import { User } from "@/types";
-import { Container } from "./styled";
+"use client";
+
+import {
+  ActionButton,
+  Actions,
+  Container,
+  DesktopOnlyActions,
+  DesktopOnlyMenu,
+  Title,
+} from "./styled";
+import { useLocale, useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
+import { useCallback, useMemo } from "react";
+import { generatePath, routeNames, routes } from "@/routes";
+import { toCamelCase } from "@/utils/pathUtils";
+import ProfilePicture from "@/components/atoms/ProfilePicture";
+import SearchTextField from "@/components/molecules/SearchTextField";
+import { useGetUserByIdQuery } from "@/api/requests/getUserByIdentifier";
+import MenuIcon from "@mui/icons-material/Menu";
+import {
+  NotificationsIcon,
+  SettingsOutlinedIcon,
+} from "@/components/atoms/icons";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 interface HeaderProps {
-  loggedInUser?: User;
   toggleDrawer: () => void;
 }
-// TODO: SHOW LOGIN BUTTON IF USER IS NOT LOGGED IN
-export default function Header({}: HeaderProps) {
-  return <Container></Container>;
+
+export default function Header({ toggleDrawer }: HeaderProps) {
+  const t = useTranslations();
+  const pathname = usePathname();
+  const router = useRouter();
+  const locale = useLocale();
+
+  const { data: loggedInUser, isLoading } = useGetUserByIdQuery({
+    userId: "1",
+  });
+
+  const pathKey = useMemo(
+    () => toCamelCase(pathname.split("/")[2]),
+    [pathname]
+  );
+
+  const titleKey = useMemo<string>(() => {
+    if (!pathKey) return "dashboard";
+
+    return routeNames.get(pathKey) || "dashboard";
+  }, [pathKey]);
+
+  const profilePictureAlt = useMemo(
+    () => `${loggedInUser?.fullName}'s profile picture`,
+    [loggedInUser?.fullName]
+  );
+
+  const settingsUrl = useMemo<string>(
+    () => `/${locale}${generatePath(routes.settings.url)}`,
+    [locale]
+  );
+
+  const goToSettings = useCallback(() => {
+    router.push(settingsUrl);
+  }, [router, settingsUrl]);
+
+  return (
+    <Container>
+      <DesktopOnlyMenu onClick={toggleDrawer}>
+        <MenuIcon />
+      </DesktopOnlyMenu>
+      <Title variant="h1">{t(`drawer.${titleKey}`)}</Title>
+      <Actions>
+        <DesktopOnlyActions>
+          <SearchTextField />
+          <ActionButton onClick={goToSettings}>
+            <SettingsOutlinedIcon />
+          </ActionButton>
+          <ActionButton
+            onClick={() => toast.info(t("youHaveNoNewNotifications"))}
+          >
+            <NotificationsIcon />
+          </ActionButton>
+        </DesktopOnlyActions>
+        {!isLoading && (
+          <ProfilePicture
+            title={profilePictureAlt}
+            src={loggedInUser?.profilePictureUrl}
+          />
+        )}
+      </Actions>
+    </Container>
+  );
 }

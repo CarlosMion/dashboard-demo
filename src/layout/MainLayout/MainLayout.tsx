@@ -1,20 +1,13 @@
 "use client";
 
-import { User } from "@/types";
 import { PropsWithChildren, useCallback, useState } from "react";
-import { MainContainer } from "./styled";
+import { MainContainer, Row, Content } from "./styled";
 import Drawer from "@/layout/Drawer";
 import Header from "@/layout/Header";
+import { ToastContainer } from "react-toastify";
 
-interface MainLayoutProps extends PropsWithChildren {
-  loggedInUser?: User;
-}
-
-export default function MainLayout({
-  loggedInUser,
-  children,
-}: MainLayoutProps) {
-  const [isDrawerOpen, setIDrawerOpen] = useState(true);
+export default function MainLayout({ children }: PropsWithChildren) {
+  const [isDrawerOpen, setIDrawerOpen] = useState(false);
 
   const toggleDrawer = useCallback(() => {
     setIDrawerOpen((prev) => !prev);
@@ -22,9 +15,12 @@ export default function MainLayout({
 
   return (
     <MainContainer>
-      <Drawer isOpen={isDrawerOpen} />
-      <Header loggedInUser={loggedInUser} toggleDrawer={toggleDrawer} />
-      {children}
+      <ToastContainer />
+      <Row>
+        <Drawer toggleDrawer={toggleDrawer} isOpen={isDrawerOpen} />
+        <Header toggleDrawer={toggleDrawer} />
+      </Row>
+      <Content>{children}</Content>
     </MainContainer>
   );
 }

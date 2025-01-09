@@ -11,5 +11,8 @@
         "myPrivileges": "My Privileges",
         "settings": "Settings"
     },
-    "overview": "Overview"
+    "overview": "Overview",
+    "profilePicture": "Profile Picture",
+    "searchForSomething": "Search for something",
+    "youHaveNoNewNotifications": "You have no new notifications"
 }

@@ -2,7 +2,7 @@
 
 import SoarTaskLogo from "@/components/molecules/SoarTaskLogo";
 import { StyledDrawer } from "./styled";
-import { List } from "@mui/material";
+import { List, useMediaQuery, useTheme } from "@mui/material";
 import DashboardItem from "@/components/molecules/DrawerItem";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
@@ -11,16 +11,17 @@ import { generatePath, routes } from "@/routes";
 
 interface DrawerProps {
   isOpen?: boolean;
+  toggleDrawer: () => void;
 }
 
-export default function Drawer({ isOpen = false }: DrawerProps) {
+export default function Drawer({ toggleDrawer, isOpen = false }: DrawerProps) {
   const t = useTranslations("drawer");
+  const theme = useTheme();
 
   const urlPathname = usePathname();
   const locale = useLocale();
 
-  console.log(">> urlPathname", urlPathname);
-  console.log(">> locale", locale);
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const homeUrl = useMemo<string>(
     () => `${generatePath(routes.home.url)}${locale}`,
@@ -69,11 +70,14 @@ export default function Drawer({ isOpen = false }: DrawerProps) {
 
   const activeTab = useMemo<string>(() => urlPathname, [urlPathname]);
 
-  console.log(">> activeTab", activeTab);
+  const variant = useMemo(
+    () => (isMobile ? "temporary" : "permanent"),
+    [isMobile]
+  );
 
   return (
-    <StyledDrawer open={isOpen} hideBackdrop>
-      <SoarTaskLogo />
+    <StyledDrawer open={isOpen} variant={variant} onClose={toggleDrawer}>
+      <SoarTaskLogo toggleDrawer={toggleDrawer} />
       <List>
         <DashboardItem
           icon="HomeIcon"

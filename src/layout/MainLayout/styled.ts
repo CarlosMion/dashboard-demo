@@ -1,24 +1,36 @@
 "use client";
 
 import { styled } from "@mui/material/styles";
-import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Stack from "@mui/material/Stack";
+import { DRAWER_WIDTH_DESKTOP } from "@/constants";
 
-export const MainContainer = styled(Container)(({ theme }) => ({
+export const MainContainer = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
   height: "100%",
   width: "100%",
+  padding: 0,
+  margin: 0,
 }));
+
+export const Content = styled(Box)(({ theme }) => ({
+  width: "100%",
+  height: "100%",
+  paddingLeft: useMediaQuery(theme.breakpoints.down("md"))
+    ? 0
+    : DRAWER_WIDTH_DESKTOP,
+}));
+
+export const Row = styled(Stack)({
+  flexDirection: "row",
+  width: "100%",
+});
 
 export const StyledDrawer = styled(Drawer)(({ theme }) => ({
   padding: `${theme.spacing(4)} 0`,
-  display: "flex",
+  display: useMediaQuery(theme.breakpoints.down("md")) ? "none" : "flex",
   flexDirection: "column",
   alignItems: "center",
-  [theme.breakpoints.up("md")]: {
-    display: "flex",
-  },
-  [theme.breakpoints.down("md")]: {
-    display: "none",
-  },
 }));

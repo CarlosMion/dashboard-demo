@@ -11,5 +11,8 @@
         "myPrivileges": "Meus Privilégios",
         "settings": "Configurações"
     },
-    "overview": "Visão geral"
+    "overview": "Visão geral",
+    "profilePicture": "Foto de Perfil",
+    "searchForSomething": "Procure por algo",
+    "youHaveNoNewNotifications": "Você não tem novas notificações"
 }
