@@ -24,6 +24,14 @@ export const Container = styled(ListItem)(({ theme }) => ({
     : `${theme.spacing(2)} ${theme.spacing(5)} ${theme.spacing(
         2
       )} ${theme.spacing(5.5)}`,
+  transition: "background-color 0.3s, transform 0.3s",
+  "&:hover": {
+    backgroundColor: theme.palette.action.hover,
+    transform: "scale(1.1)",
+  },
+  "&:active": {
+    backgroundColor: theme.palette.action.selected,
+  },
 }));
 
 export const Title = styled(Typography)<TitleProps>(({ theme, textcolor }) => ({

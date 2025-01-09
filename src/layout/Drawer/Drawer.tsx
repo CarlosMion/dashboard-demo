@@ -69,10 +69,8 @@ export default function Drawer({ isOpen = false }: DrawerProps) {
 
   const activeTab = useMemo<string>(() => urlPathname, [urlPathname]);
 
-  console.log(">> activeTab", activeTab);
-
   return (
-    <StyledDrawer open={isOpen} hideBackdrop>
+    <StyledDrawer open={isOpen} hideBackdrop variant="permanent">
       <SoarTaskLogo />
       <List>
         <DashboardItem
