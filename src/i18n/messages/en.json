@@ -1,7 +1,7 @@
 {
     "drawer": {
         "soarTask": "Soar Task",
-        "dashboard": "Dashboard",
+        "dashboard": "Overview",
         "transactions": "Transactions",
         "accounts": "Accounts",
         "investments": "Investments",
@@ -12,10 +12,31 @@
         "settings": "Settings"
     },
     "settingsPage": {
-        "editProfile": "Edit Profile",
-        "preferences": "Preferences",
-        "security": "Security",
-        "settingTabs": "Setting Tabs"
+        "tabs": {
+            "editProfile": "Edit Profile",
+            "preferences": "Preferences",
+            "security": "Security",
+            "settingTabs": "Setting Tabs"
+        },
+        "profileForm": {
+            "yourName": "Your Name",
+            "userName": "User Name",
+            "email": "Email",
+            "password": "Password",
+            "dateOfBirth": "Date of Birth",
+            "presentAddress": "Present Address",
+            "permanentAddress": "Permanent Address",
+            "city": "City",
+            "postalCode": "Postal Code",
+            "country": "Country",
+            "save": "Salvar",
+            "errors": {
+                "fieldRequired": "{field} is required",
+                "invalidField": "Invalid {field}",
+                "mustContainOnlyLettersAndNumbers": "{field} must contain only letters and numbers",
+                "fieldMustContainAtLeast": "{field} must contain at least {min} characters"
+            }
+        }
     },
     "overview": "Overview",
     "profilePicture": "Profile Picture",

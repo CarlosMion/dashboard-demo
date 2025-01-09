@@ -3,10 +3,10 @@ import {
   StyledTab,
   StyledTabList,
   StyledTabsContainer,
+  TabContainer,
   TabHeaderContainer,
 } from "./styled";
 import TabContext from "@mui/lab/TabContext";
-import TabPanel from "@mui/lab/TabPanel";
 import { useTranslations } from "next-intl";
 
 export interface TabInfo {
@@ -21,7 +21,7 @@ interface TabsContainerProps {
 export default function TabsContainer({ tabs }: TabsContainerProps) {
   const [value, setValue] = useState<string>(tabs[0].label);
 
-  const t = useTranslations("settingsPage");
+  const t = useTranslations("settingsPage.tabs");
 
   const handleChange = (_event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -37,9 +37,9 @@ export default function TabsContainer({ tabs }: TabsContainerProps) {
           <StyledTab key={`tab-${label}`} label={label} value={label} />
         );
         acc.TabContents.push(
-          <TabPanel key={`tab-panel-${label}`} value={label}>
+          <TabContainer key={`tab-panel-${label}`} value={label}>
             {content}
-          </TabPanel>
+          </TabContainer>
         );
         return acc;
       },

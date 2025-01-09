@@ -9,6 +9,19 @@ import {
   isServerError,
   toErrorWithMessage,
 } from "./errorUtils";
+import {
+  blobToFile,
+  dataURItoBlob,
+  dataURItoFile,
+  getImageDimensions,
+  isImageDimensionWithinThreshold,
+} from "./imageUtils";
+import {
+  createImage,
+  getRadianAngle,
+  rotateSize,
+  getCroppedImg,
+} from "./cropImageUtils";
 export {
   fetcher,
   isEdge,
@@ -19,4 +32,13 @@ export {
   isErrorWithMessage,
   isServerError,
   toErrorWithMessage,
+  blobToFile,
+  dataURItoBlob,
+  dataURItoFile,
+  getImageDimensions,
+  isImageDimensionWithinThreshold,
+  getCroppedImg,
+  rotateSize,
+  getRadianAngle,
+  createImage,
 };

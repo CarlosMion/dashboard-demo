@@ -1,7 +1,7 @@
 {
     "drawer": {
         "soarTask": "Teste da Soar",
-        "dashboard": "Painel de Controle",
+        "dashboard": "Visão geral",
         "transactions": "Transações",
         "accounts": "Contas",
         "investments": "Investimentos",
@@ -12,10 +12,25 @@
         "settings": "Configurações"
     },
     "settingsPage": {
-        "editProfile": "Editar Perfil",
-        "preferences": "Preferências",
-        "security": "Segurança",
-        "settingTabs": "Abas de Configurações"
+        "tabs": {
+            "editProfile": "Editar Perfil",
+            "preferences": "Preferências",
+            "security": "Segurança",
+            "settingTabs": "Abas de Configurações"
+        },
+        "profileForm": {
+            "yourName": "Seu Nome",
+            "userName": "Nome de Usuário",
+            "email": "Email",
+            "password": "Senha",
+            "dateOfBirth": "Data de Nascimento",
+            "presentAddress": "Endereço Atual",
+            "permanentAddress": "Endereço Permanente",
+            "city": "Cidade",
+            "postalCode": "Código Postal",
+            "country": "País",
+            "save": "Salvar"
+        }
     },
     "overview": "Visão geral",
     "profilePicture": "Foto de Perfil",
