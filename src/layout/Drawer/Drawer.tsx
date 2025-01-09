@@ -77,7 +77,7 @@ export default function Drawer({ toggleDrawer, isOpen = false }: DrawerProps) {
 
   return (
     <StyledDrawer open={isOpen} variant={variant} onClose={toggleDrawer}>
-      <SoarTaskLogo />
+      <SoarTaskLogo toggleDrawer={toggleDrawer} />
       <List>
         <DashboardItem
           icon="HomeIcon"
