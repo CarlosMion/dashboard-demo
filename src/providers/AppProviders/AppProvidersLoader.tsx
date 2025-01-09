@@ -29,7 +29,7 @@ function AppProvidersLoaderInternal({
 
   return (
     <AppProviders messages={messages} userAgent={userAgent}>
-      <MainLayout loggedInUser={undefined}>{children}</MainLayout>
+      <MainLayout>{children}</MainLayout>
     </AppProviders>
   );
 }
