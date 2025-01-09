@@ -1,12 +1,12 @@
 "use client";
 
 import { PropsWithChildren, useCallback, useState } from "react";
-import { MainContainer, Row } from "./styled";
+import { MainContainer, Row, Content } from "./styled";
 import Drawer from "@/layout/Drawer";
 import Header from "@/layout/Header";
 
 export default function MainLayout({ children }: PropsWithChildren) {
-  const [isDrawerOpen, setIDrawerOpen] = useState(true);
+  const [isDrawerOpen, setIDrawerOpen] = useState(false);
 
   const toggleDrawer = useCallback(() => {
     setIDrawerOpen((prev) => !prev);
@@ -15,10 +15,10 @@ export default function MainLayout({ children }: PropsWithChildren) {
   return (
     <MainContainer>
       <Row>
-        <Drawer isOpen={isDrawerOpen} />
+        <Drawer toggleDrawer={toggleDrawer} isOpen={isDrawerOpen} />
         <Header toggleDrawer={toggleDrawer} />
       </Row>
-      {children}
+      <Content>{children}</Content>
     </MainContainer>
   );
 }

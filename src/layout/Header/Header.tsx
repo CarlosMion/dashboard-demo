@@ -1,16 +1,26 @@
 "use client";
 
-import { Actions, Container, DesktopOnlyActions, Title } from "./styled";
-import RoundIconButton from "@/components/atoms/RoundIconButton";
+import {
+  ActionButton,
+  Actions,
+  Container,
+  DesktopOnlyActions,
+  DesktopOnlyMenu,
+  Title,
+} from "./styled";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import { routeNames } from "@/routes";
 import { toCamelCase } from "@/utils/pathUtils";
-import { useTheme } from "@mui/material";
 import ProfilePicture from "@/components/atoms/ProfilePicture";
 import SearchTextField from "@/components/molecules/SearchTextField";
 import { useGetUserByIdQuery } from "@/api/requests/getUserByIdentifier";
+import MenuIcon from "@mui/icons-material/Menu";
+import {
+  NotificationsIcon,
+  SettingsOutlinedIcon,
+} from "@/components/atoms/icons";
 
 interface HeaderProps {
   toggleDrawer: () => void;
@@ -18,7 +28,6 @@ interface HeaderProps {
 
 export default function Header({ toggleDrawer }: HeaderProps) {
   const t = useTranslations("drawer");
-  const theme = useTheme();
   const pathname = usePathname();
 
   const { data: loggedInUser, isLoading } = useGetUserByIdQuery({
@@ -43,15 +52,19 @@ export default function Header({ toggleDrawer }: HeaderProps) {
 
   return (
     <Container>
+      <DesktopOnlyMenu onClick={toggleDrawer}>
+        <MenuIcon />
+      </DesktopOnlyMenu>
       <Title variant="h1">{t(titleKey)}</Title>
       <Actions>
         <DesktopOnlyActions>
           <SearchTextField />
-          <RoundIconButton icon="SettingsOutlinedIcon" />
-          <RoundIconButton
-            icon="NotificationsIcon"
-            fill={theme.palette.primary.main}
-          />
+          <ActionButton>
+            <SettingsOutlinedIcon />
+          </ActionButton>
+          <ActionButton>
+            <NotificationsIcon />
+          </ActionButton>
         </DesktopOnlyActions>
         {!isLoading && (
           <ProfilePicture

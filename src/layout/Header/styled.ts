@@ -3,7 +3,7 @@
 import { styled } from "@mui/material/styles";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { useMediaQuery } from "@mui/material";
+import { IconButton, useMediaQuery } from "@mui/material";
 
 export const Container = styled(Stack)(({ theme }) => ({
   display: "flex",
@@ -33,4 +33,17 @@ export const DesktopOnlyActions = styled(Stack)(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
   gap: 28,
+}));
+
+export const ActionButton = styled(IconButton)(({ theme }) => ({
+  width: "50px",
+  height: "50px",
+  backgroundColor: theme.palette.background.default,
+  "&:hover": {
+    backgroundColor: theme.palette.action.hover,
+  },
+}));
+
+export const DesktopOnlyMenu = styled(IconButton)(({ theme }) => ({
+  display: useMediaQuery(theme.breakpoints.down("md")) ? "flex" : "none",
 }));
