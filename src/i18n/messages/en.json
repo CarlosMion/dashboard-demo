@@ -11,6 +11,12 @@
         "myPrivileges": "My Privileges",
         "settings": "Settings"
     },
+    "settingsPage": {
+        "editProfile": "Edit Profile",
+        "preferences": "Preferences",
+        "security": "Security",
+        "settingTabs": "Setting Tabs"
+    },
     "overview": "Overview",
     "profilePicture": "Profile Picture",
     "searchForSomething": "Search for something",

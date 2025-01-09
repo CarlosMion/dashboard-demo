@@ -11,6 +11,12 @@
         "myPrivileges": "Meus Privilégios",
         "settings": "Configurações"
     },
+    "settingsPage": {
+        "editProfile": "Editar Perfil",
+        "preferences": "Preferências",
+        "security": "Segurança",
+        "settingTabs": "Abas de Configurações"
+    },
     "overview": "Visão geral",
     "profilePicture": "Foto de Perfil",
     "searchForSomething": "Procure por algo",
