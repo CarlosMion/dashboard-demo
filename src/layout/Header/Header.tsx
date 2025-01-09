@@ -8,10 +8,10 @@ import {
   DesktopOnlyMenu,
   Title,
 } from "./styled";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
-import { useMemo } from "react";
-import { routeNames } from "@/routes";
+import { useCallback, useMemo } from "react";
+import { generatePath, routeNames, routes } from "@/routes";
 import { toCamelCase } from "@/utils/pathUtils";
 import ProfilePicture from "@/components/atoms/ProfilePicture";
 import SearchTextField from "@/components/molecules/SearchTextField";
@@ -21,14 +21,18 @@ import {
   NotificationsIcon,
   SettingsOutlinedIcon,
 } from "@/components/atoms/icons";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 interface HeaderProps {
   toggleDrawer: () => void;
 }
 
 export default function Header({ toggleDrawer }: HeaderProps) {
-  const t = useTranslations("drawer");
+  const t = useTranslations();
   const pathname = usePathname();
+  const router = useRouter();
+  const locale = useLocale();
 
   const { data: loggedInUser, isLoading } = useGetUserByIdQuery({
     userId: "1",
@@ -50,19 +54,30 @@ export default function Header({ toggleDrawer }: HeaderProps) {
     [loggedInUser?.fullName]
   );
 
+  const settingsUrl = useMemo<string>(
+    () => `/${locale}${generatePath(routes.settings.url)}`,
+    [locale]
+  );
+
+  const goToSettings = useCallback(() => {
+    router.push(settingsUrl);
+  }, [router, settingsUrl]);
+
   return (
     <Container>
       <DesktopOnlyMenu onClick={toggleDrawer}>
         <MenuIcon />
       </DesktopOnlyMenu>
-      <Title variant="h1">{t(titleKey)}</Title>
+      <Title variant="h1">{t(`drawer.${titleKey}`)}</Title>
       <Actions>
         <DesktopOnlyActions>
           <SearchTextField />
-          <ActionButton>
+          <ActionButton onClick={goToSettings}>
             <SettingsOutlinedIcon />
           </ActionButton>
-          <ActionButton>
+          <ActionButton
+            onClick={() => toast.info(t("youHaveNoNewNotifications"))}
+          >
             <NotificationsIcon />
           </ActionButton>
         </DesktopOnlyActions>
