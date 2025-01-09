@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Container, Title } from "./styled";
+import { ActiveIndicator, Container, Title } from "./styled";
 
 import * as Icons from "@/components/atoms/icons";
 import { useTheme } from "@mui/material";
@@ -29,6 +29,7 @@ export default function DrawerItem({
   return (
     <Link href={path} prefetch>
       <Container>
+        {isActive && <ActiveIndicator />}
         {!!IconComponent && <IconComponent fill={fillColor} />}
         <Title variant="h3" textcolor={fillColor}>
           {title}
