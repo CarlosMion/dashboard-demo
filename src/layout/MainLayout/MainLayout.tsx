@@ -2,7 +2,7 @@
 
 import { User } from "@/types";
 import { PropsWithChildren, useCallback, useState } from "react";
-import { MainContainer } from "./styled";
+import { MainContainer, Row } from "./styled";
 import Drawer from "@/layout/Drawer";
 import Header from "@/layout/Header";
 
@@ -22,8 +22,10 @@ export default function MainLayout({
 
   return (
     <MainContainer>
-      <Drawer isOpen={isDrawerOpen} />
-      <Header loggedInUser={loggedInUser} toggleDrawer={toggleDrawer} />
+      <Row>
+        <Drawer isOpen={isDrawerOpen} />
+        <Header loggedInUser={loggedInUser} toggleDrawer={toggleDrawer} />
+      </Row>
       {children}
     </MainContainer>
   );

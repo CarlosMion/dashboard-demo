@@ -7,7 +7,9 @@ import LoansIcon from "./LoansIcon";
 import PrivilegesIcon from "./PrivilegesIcon";
 import ServicesIcon from "./ServicesIcon";
 import SettingsSolidIcon from "./SettingsSolidIcon";
+import SettingsOutlinedIcon from "./SettingsOutlinedIcon";
 import TransactionsIcon from "./TransactionsIcon";
+import NotificationsIcon from "./NotificationsIcon";
 
 export {
   SoarTaskIcon,
@@ -19,5 +21,7 @@ export {
   PrivilegesIcon,
   ServicesIcon,
   SettingsSolidIcon,
+  SettingsOutlinedIcon,
   TransactionsIcon,
+  NotificationsIcon,
 };

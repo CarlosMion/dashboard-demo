@@ -47,3 +47,5 @@ export function generatePath(
     throw new Error(`Missing parameter: ${key}`);
   });
 }
+
+export const routeNames = new Map(Object.keys(routes).map((key) => [key, key]));

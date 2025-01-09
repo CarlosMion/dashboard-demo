@@ -19,9 +19,6 @@ export default function Drawer({ isOpen = false }: DrawerProps) {
   const urlPathname = usePathname();
   const locale = useLocale();
 
-  console.log(">> urlPathname", urlPathname);
-  console.log(">> locale", locale);
-
   const homeUrl = useMemo<string>(
     () => `${generatePath(routes.home.url)}${locale}`,
     [locale]
