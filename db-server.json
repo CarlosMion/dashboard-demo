@@ -1,0 +1,34 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "fullName": "Charlene Reed",
+            "userName": "charlenereed",
+            "email": "charlenereed@gmail.com",
+            "password": "123456",
+            "birthDate": "25 January 1990",
+            "headline": "Software Engineer",
+            "currentAddress": "San Jose, California, USA",
+            "permanentAddress": "San Jose, California, USA",
+            "city": "San Jose",
+            "postalCode": "35962",
+            "country": "USA",
+            "profilePictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736390592/7de84d22-aa2f-4125-ab20-bd98414bca73.png"
+        },
+        {
+            "id": "2",
+            "fullName": "Charlene Reed",
+            "userName": "charlenereed",
+            "email": "charlenereed@gmail.com",
+            "password": "123456",
+            "birthDate": "25 January 1990",
+            "headline": "Software Engineer",
+            "currentAddress": "San Jose, California, USA",
+            "permanentAddress": "San Jose, California, USA",
+            "city": "San Jose",
+            "postalCode": "35962",
+            "country": "USA",
+            "profilePictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736390592/7de84d22-aa2f-4125-ab20-bd98414bca73.png"
+        }
+    ]
+}
