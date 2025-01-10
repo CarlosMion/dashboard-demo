@@ -19,10 +19,6 @@ declare module "@mui/material/styles/createPalette" {
     mustardYellow: string;
     lightYellow: string;
   }
-
-  interface PaletteOptions {
-    commonColors?: Partial<CommonColors>;
-  }
 }
 
 const palette: PaletteOptions = {
@@ -32,6 +28,13 @@ const palette: PaletteOptions = {
   common: {
     black: "#000000",
     white: "#FFFFFF",
+    depositGreen: "#41D4A8",
+    withdrawRed: "#FF4B4A",
+    orange: "#FC7900",
+    lightGreen: "#DCFAF8",
+    teal: "#16DBCC",
+    mustardYellow: "#FFBB38",
+    lightYellow: "#FFF5D9",
   },
   primary: {
     main: "#396AFF",
@@ -61,15 +64,6 @@ const palette: PaletteOptions = {
       "#FFFFFF",
       0.15
     )}, ${alpha("#FFFFFF", 0)})`,
-  },
-  commonColors: {
-    depositGreen: "#41D4A8",
-    withdrawRed: "#FF5C93",
-    orange: "#FC7900",
-    lightGreen: "#DCFAF8",
-    teal: "#16DBCC",
-    mustardYellow: "#FFBB38",
-    lightYellow: "#FFF5D9",
   },
 };
 

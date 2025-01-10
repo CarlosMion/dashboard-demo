@@ -13,3 +13,11 @@ export function formatValidThru(value: string): string {
     year: "2-digit",
   });
 }
+
+export function formatTransactionDate(value: string): string {
+  return new Date(value).toLocaleDateString("en-US", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  });
+}

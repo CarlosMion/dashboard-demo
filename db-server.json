@@ -59,7 +59,7 @@
     ],
     "recentTransactions": [
         {
-            "title": "Withdraw from my card",
+            "title": "Credit Card Payment",
             "source": "card",
             "amount": -850,
             "date": "2021-01-28T00:00:00.000Z"

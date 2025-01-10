@@ -20,7 +20,11 @@ export interface CreditCard {
   expirationDate: string;
 }
 
-export type TransactionSource = "card" | "bank" | "person";
+export enum TransactionSource {
+  CARD = "card",
+  BANK = "bank",
+  PERSON = "person",
+}
 
 export interface RecentTransaction {
   title: string;

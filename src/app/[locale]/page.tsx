@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import Grid from "@mui/material/Grid2";
 import MyCards from "@/components/organisms/MyCards";
 import { Theme } from "@mui/material";
+import RecentTransactions from "@/components/organisms/RecentTransactions";
 
 const Container = styled(Grid)(({ theme }) => ({
   width: "100%",
@@ -24,10 +25,12 @@ export default function Home() {
   );
   return (
     <Container container spacing={3}>
-      <Grid size={isMobile ? 12 : 9}>
+      <Grid size={isMobile ? 12 : 8.5}>
         <MyCards />
       </Grid>
-      <Grid size={isMobile ? 12 : 3}>{t("overview")}</Grid>
+      <Grid size={isMobile ? 12 : 3.5}>
+        <RecentTransactions />
+      </Grid>
     </Container>
   );
 }

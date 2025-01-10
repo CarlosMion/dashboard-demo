@@ -13,7 +13,7 @@ import CardSkeleton from "@/components/molecules/Card/CardSkeleton";
 import { CreditCard } from "@/types";
 
 interface MyCardsProps {
-  displayMode: "all" | "limited";
+  displayMode?: "all" | "limited";
 }
 
 export default function MyCards({ displayMode = "limited" }: MyCardsProps) {
