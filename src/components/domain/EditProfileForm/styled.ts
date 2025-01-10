@@ -13,6 +13,13 @@ export const FormButton = styled(Button)(({ theme }) => ({
   marginTop: theme.spacing(2),
   fontSize: useMediaQuery(theme.breakpoints.down("md")) ? "0.7rem" : "0.9rem",
   textTransform: "none",
+  transition: "background-color 0.3s, transform 0.3s",
+  "&:hover": {
+    backgroundColor: theme.palette.grey[400],
+  },
+  "&:active": {
+    backgroundColor: theme.palette.common.black,
+  },
 }));
 
 export const Container = styled(Box)(({ theme }) => ({

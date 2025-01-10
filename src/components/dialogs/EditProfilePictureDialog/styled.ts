@@ -9,4 +9,10 @@ export const ApplyButton = styled(Button)(({ theme }) => ({
   width: useMediaQuery(theme.breakpoints.down("md")) ? "100%" : "auto",
   marginTop: theme.spacing(2),
   textTransform: "none",
+  "&:hover": {
+    backgroundColor: theme.palette.grey[400],
+  },
+  "&:active": {
+    backgroundColor: theme.palette.common.black,
+  },
 }));
