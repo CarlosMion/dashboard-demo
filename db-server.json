@@ -30,5 +30,153 @@
             "country": "USA",
             "profilePictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736390592/7de84d22-aa2f-4125-ab20-bd98414bca73.png"
         }
+    ],
+    "creditCards": [
+        {
+            "userId": "1",
+            "balance": 1000,
+            "cardNumber": "3778567890121234",
+            "expirationDate": "22-12-0T00:00:00.000Z"
+        },
+        {
+            "userId": "1",
+            "balance": 0,
+            "cardNumber": "12345678901237788",
+            "expirationDate": "31-01-0T00:00:00.000Z"
+        },
+        {
+            "userId": "1",
+            "balance": 123.75,
+            "cardNumber": "9134567890124212",
+            "expirationDate": "25-06-0T00:00:00.000Z"
+        },
+        {
+            "userId": "1",
+            "balance": 1000,
+            "cardNumber": "4534567890123443",
+            "expirationDate": "29-11-0T00:00:00.000Z"
+        }
+    ],
+    "recentTransactions": [
+        {
+            "title": "Withdraw from my card",
+            "source": "card",
+            "amount": -850,
+            "date": "2021-01-28T00:00:00.000Z"
+        },
+        {
+            "title": "Deposit Paypal",
+            "source": "paypal",
+            "amount": 2500,
+            "date": "2021-01-25T00:00:00.000Z"
+        },
+        {
+            "title": "Jemi Wilson",
+            "source": "user",
+            "amount": 5400,
+            "date": "2021-01-25T00:00:00.000Z"
+        }
+    ],
+    "weeklyActivity": [
+        {
+            "day": "Sat",
+            "deposit": 125,
+            "withdraw": 325
+        },
+        {
+            "day": "Sun",
+            "deposit": 50,
+            "withdraw": 200
+        },
+        {
+            "day": "Mon",
+            "deposit": 200,
+            "withdraw": 100
+        },
+        {
+            "day": "Tue",
+            "deposit": 375,
+            "withdraw": 120
+        },
+        {
+            "day": "Wed",
+            "deposit": 200,
+            "withdraw": 150
+        },
+        {
+            "day": "Thu",
+            "deposit": 250,
+            "withdraw": 380
+        },
+        {
+            "day": "Fri",
+            "deposit": 350,
+            "withdraw": 400
+        }
+    ],
+    "expenseStatistics": [
+        {
+            "category": "Enterntainment",
+            "percentage": 30
+        },
+        {
+            "category": "Investment",
+            "percentage": 20
+        },
+        {
+            "category": "Bill Expenses",
+            "percentage": 15
+        },
+        {
+            "category": "Others",
+            "percentage": 35
+        }
+    ],
+    "friends": [
+        {
+            "userId": "123",
+            "name": "Livia Bator",
+            "headline": "CEO"
+        },
+        {
+            "userId": "234",
+            "name": "Randy Press",
+            "headline": "Director"
+        },
+        {
+            "userId": "345",
+            "name": "Workman",
+            "headline": "Designer"
+        }
+    ],
+    "balanceHistory": [
+        {
+            "date": "Jul",
+            "balance": 1000
+        },
+        {
+            "date": "Aug",
+            "balance": 1500
+        },
+        {
+            "date": "Sep",
+            "balance": 2000
+        },
+        {
+            "date": "Oct",
+            "balance": 1150
+        },
+        {
+            "date": "Nov",
+            "balance": 1000
+        },
+        {
+            "date": "Dec",
+            "balance": 900
+        },
+        {
+            "date": "Jan",
+            "balance": 800
+        }
     ]
 }

@@ -23,7 +23,7 @@ export type EditImageDialogProps = { imageUrl: string } & NiceModalHocProps;
 const EditImageDialog: FunctionComponent<EditImageDialogProps> =
   NiceModal.create(({ imageUrl }) => {
     const modal = useModal();
-    const t = useTranslations("ui");
+    const t = useTranslations();
 
     const [crop, setCrop] = useState<Point>({ x: 0, y: 0 });
     const [zoom, setZoom] = useState<number>(1);

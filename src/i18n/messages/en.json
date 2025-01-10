@@ -42,5 +42,7 @@
     "overview": "Overview",
     "profilePicture": "Profile Picture",
     "searchForSomething": "Search for something",
-    "youHaveNoNewNotifications": "You have no new notifications"
+    "youHaveNoNewNotifications": "You have no new notifications",
+    "editMedia": "Edit Media",
+    "apply": "Apply"
 }
