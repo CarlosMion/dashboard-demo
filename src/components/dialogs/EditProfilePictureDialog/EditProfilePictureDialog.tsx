@@ -80,7 +80,7 @@ const EditImageDialog: FunctionComponent<EditImageDialogProps> =
       >
         <DialogTitle
           variant={"h6"}
-          sx={{ textAlign: "center", color: "primary.light", pb: 5 }}
+          sx={{ textAlign: "center", color: "text.primary", pb: 5 }}
         >
           {t("editMedia")}
         </DialogTitle>
