@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
@@ -24,6 +24,7 @@ import {
 import dayjs, { Dayjs } from "dayjs";
 import FormDatePicker from "@/components/molecules/FormDatePicker";
 import EditProfilePicture from "@/components/molecules/EditProfilePicture";
+import { useUpdateUser } from "@/api/mutations/updateUser";
 
 interface ProfileFormData {
   fullName: string;
@@ -45,6 +46,7 @@ interface ProfileFormProps {
 const ProfileForm = ({ user }: ProfileFormProps) => {
   const theme = useTheme();
   const t = useTranslations("settingsPage.profileForm");
+  const updateUserMutation = useUpdateUser();
 
   const {
     control,
@@ -69,10 +71,16 @@ const ProfileForm = ({ user }: ProfileFormProps) => {
 
   const fieldSize = useMemo(() => (isMobile ? 12 : 6), [isMobile]);
 
-  const onSubmit = (data: ProfileFormData) => {
-    console.log(data);
-    // Handle form submission
-  };
+  const onSubmit = useCallback(
+    (data: ProfileFormData) => {
+      updateUserMutation.mutateAsync({
+        userId: user?.id || "",
+        data: { ...data, birthDate: data.birthDate.toISOString() },
+      });
+    },
+    [updateUserMutation, user?.id]
+  );
+
   return (
     <Container>
       <PictureContainer>

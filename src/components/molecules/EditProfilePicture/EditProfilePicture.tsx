@@ -26,12 +26,12 @@ interface EditProfilePictureProps {
 
 export default function EditProfilePicture({ user }: EditProfilePictureProps) {
   const t = useTranslations();
-  const updateUserMutation = useUpdateUser();
+
   const uploadProfilePictureMutation = useUploadProfilePicture();
 
   const isLoading = useMemo<boolean>(
-    () => updateUserMutation.isPending,
-    [updateUserMutation.isPending]
+    () => uploadProfilePictureMutation.isPending,
+    [uploadProfilePictureMutation.isPending]
   );
 
   const editImageHandler = useCallback(
