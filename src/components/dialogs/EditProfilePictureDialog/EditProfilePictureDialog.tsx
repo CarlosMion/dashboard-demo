@@ -1,7 +1,6 @@
 import NiceModal, { NiceModalHocProps, useModal } from "@ebay/nice-modal-react";
 import {
   Box,
-  Button,
   Dialog,
   DialogContent,
   DialogTitle,
@@ -17,6 +16,7 @@ import { Close } from "@mui/icons-material";
 
 import { getCroppedImg } from "@/utils";
 import DialogTransitionSlide from "../transitions/DialogTransitionSlide";
+import { ApplyButton } from "./styled";
 
 export type EditImageDialogProps = { imageUrl: string } & NiceModalHocProps;
 
@@ -114,14 +114,14 @@ const EditImageDialog: FunctionComponent<EditImageDialogProps> =
               sx={{ mt: 3, mb: 2 }}
             />
 
-            <Button
+            <ApplyButton
               variant={"contained"}
               color={"primary"}
               fullWidth
               onClick={submitHandler}
             >
               {t("apply")}
-            </Button>
+            </ApplyButton>
           </Box>
         </DialogContent>
 

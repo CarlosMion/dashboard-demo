@@ -15,13 +15,19 @@ export const FormButton = styled(Button)(({ theme }) => ({
   textTransform: "none",
 }));
 
-export const Container = styled(Box)({
+export const Container = styled(Box)(({ theme }) => ({
   display: "flex",
-  flexDirection: "column",
-});
+  flexDirection: useMediaQuery(theme.breakpoints.down("md")) ? "column" : "row",
+}));
 
 export const FullWidthButtonContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "end",
   padding: `${theme.spacing(2)} 0`,
+}));
+
+export const PictureContainer = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  padding: `0 ${theme.spacing(5)}`,
 }));

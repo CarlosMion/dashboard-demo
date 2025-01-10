@@ -11,14 +11,19 @@ import FormField from "@/components/molecules/FormField";
 import { useTranslations } from "next-intl";
 import {
   EMAIL_REGEX_VALIDATION,
-  FULL_NAME_REGEX_VALIDATION,
   PASSWORD_MIN_LENGTH,
   PASSWORD_REGEX_VALIDATION,
   POSTAL_CODE_REGEX_VALIDATION,
 } from "@/constants";
-import { Container, FormButton, FullWidthButtonContainer } from "./styled";
+import {
+  Container,
+  FormButton,
+  FullWidthButtonContainer,
+  PictureContainer,
+} from "./styled";
 import dayjs, { Dayjs } from "dayjs";
 import FormDatePicker from "@/components/molecules/FormDatePicker";
+import EditProfilePicture from "@/components/molecules/EditProfilePicture";
 
 interface ProfileFormData {
   fullName: string;
@@ -70,6 +75,9 @@ const ProfileForm = ({ user }: ProfileFormProps) => {
   };
   return (
     <Container>
+      <PictureContainer>
+        <EditProfilePicture user={user} />
+      </PictureContainer>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Grid container spacing={1.75}>
           <FormField

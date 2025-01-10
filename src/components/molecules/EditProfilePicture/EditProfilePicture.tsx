@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import NiceModal from "@ebay/nice-modal-react";
-import { Box, Button, Skeleton, Typography } from "@mui/material";
-import Divider from "@mui/material/Divider";
+import { Box, Skeleton } from "@mui/material";
 import { useTranslations } from "next-intl";
 import React, { useCallback, useMemo } from "react";
 import { DropEvent, FileRejection, useDropzone } from "react-dropzone";
@@ -9,11 +8,17 @@ import { DropEvent, FileRejection, useDropzone } from "react-dropzone";
 import { blobToFile } from "@/utils";
 import ProfilePicture from "@/components/atoms/ProfilePicture";
 import { User } from "@/types";
-import EditImageDialog, {
-  EditImageDialogProps,
-} from "@/components/dialogs/EditProfilePictureDialog";
-import { Edit } from "@mui/icons-material";
+import EditImageDialog from "@/components/dialogs/EditProfilePictureDialog";
 import { useUpdateUser } from "@/api/mutations/updateUser";
+import { EditIcon } from "@/components/atoms/icons";
+import {
+  AbsoluteContainer,
+  Container,
+  RelativePictureContainer,
+  StyledIconButton,
+} from "./styled";
+import { useUploadProfilePicture } from "@/api/mutations/uploadProfilePicture";
+import { toast } from "react-toastify";
 
 interface EditProfilePictureProps {
   user?: User;
@@ -22,13 +27,12 @@ interface EditProfilePictureProps {
 export default function EditProfilePicture({ user }: EditProfilePictureProps) {
   const t = useTranslations();
   const updateUserMutation = useUpdateUser();
+  const uploadProfilePictureMutation = useUploadProfilePicture();
 
   const isLoading = useMemo<boolean>(
     () => updateUserMutation.isPending,
     [updateUserMutation.isPending]
   );
-
-  const userId = useMemo<string>(() => user?.id || "", [user?.id]);
 
   const editImageHandler = useCallback(
     async (imageUrl: string, file: File): Promise<void> => {
@@ -39,15 +43,13 @@ export default function EditProfilePicture({ user }: EditProfilePictureProps) {
 
       if (resultImage) {
         const resultFile = blobToFile(resultBlob, file.name);
-        const formData = new FormData();
-        formData.append("profilePicture", resultFile);
-        // const response = await updateUserMutation.mutateAsync({
-        //   userId,
-        //   data: { ...formData },
-        // });
+        await uploadProfilePictureMutation.mutateAsync({
+          file: resultFile,
+        });
+        toast.success(t("profilePictureUpdated"));
       }
     },
-    [userId, updateUserMutation]
+    [uploadProfilePictureMutation, t]
   );
 
   const imageSelectedHandler = useCallback(
@@ -82,55 +84,30 @@ export default function EditProfilePicture({ user }: EditProfilePictureProps) {
   }, [open]);
 
   return (
-    <Box data-testid="edit-profile-picture">
-      <Typography variant={"body2"} sx={{ fontWeight: 500 }}>
-        {t("profilePicture")}
-      </Typography>
-
-      <Box sx={{ textAlign: "center", mt: 2 }}>
-        <Box sx={{ position: "relative", display: "inline-block" }}>
-          {!isLoading && user ? (
-            <ProfilePicture
-              desktopSize={90}
-              mobileSize={100}
-              src={user.profilePictureUrl}
-              title={user.fullName}
-            />
-          ) : (
-            <Skeleton variant={"circular"} width={120} height={120} />
-          )}
-          {user && (
-            <Box
-              sx={{
-                position: "absolute",
-                bottom: -2,
-                right: -10,
-              }}
-            >
-              <Box {...getRootProps()}>
-                <input {...getInputProps()} />
-              </Box>
-
-              <Button
-                variant={"contained"}
-                color={"inherit"}
-                onClick={selectImageHandler}
-                sx={{
-                  width: 45,
-                  minWidth: 45,
-                  height: 45,
-                  p: 0,
-                  borderRadius: "50%",
-                }}
-              >
-                <Edit />
-              </Button>
+    <Container>
+      <RelativePictureContainer>
+        {!isLoading && user ? (
+          <ProfilePicture
+            desktopSize={90}
+            mobileSize={100}
+            src={user.profilePictureUrl}
+            title={user.fullName}
+          />
+        ) : (
+          <Skeleton variant={"circular"} width={120} height={120} />
+        )}
+        {user && (
+          <AbsoluteContainer>
+            <Box {...getRootProps()}>
+              <input {...getInputProps()} />
             </Box>
-          )}
-        </Box>
-      </Box>
 
-      <Divider sx={{ mt: 3 }} />
-    </Box>
+            <StyledIconButton onClick={selectImageHandler}>
+              <EditIcon />
+            </StyledIconButton>
+          </AbsoluteContainer>
+        )}
+      </RelativePictureContainer>
+    </Container>
   );
 }
