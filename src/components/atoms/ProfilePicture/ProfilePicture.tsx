@@ -43,7 +43,7 @@ export default memo(function ProfilePicture({
 
   const clickHandler = useCallback(() => {
     onClick?.();
-  }, []);
+  }, [onClick]);
 
   return (
     <StyledAvatar

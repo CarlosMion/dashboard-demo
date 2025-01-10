@@ -39,26 +39,22 @@ export default function ApiErrorManager() {
 
       setApiErrorData({ error, mutation });
     };
-  }, []);
+  }, [queryClient]);
 
-  const notificationHandler = useCallback(
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (apiErrorData: ApiErrorData) => {
-      let errorMessage = apiErrorData?.error.message;
-      try {
-        errorMessage =
-          // @ts-expect-error error is not a string
-          apiErrorData?.error?.response?.data?.message ||
-          // @ts-expect-error error is not a string
-          apiErrorData?.error?.response?.data?.errors?.join(", ") ||
-          getErrorMessage(apiErrorData);
-      } catch (e) {
-        console.error(`error: ${errorMessage}`, e);
-      }
-      //
-    },
-    []
-  );
+  const notificationHandler = useCallback((apiErrorData: ApiErrorData) => {
+    let errorMessage = apiErrorData?.error.message;
+    try {
+      errorMessage =
+        // @ts-expect-error error is not a string
+        apiErrorData?.error?.response?.data?.message ||
+        // @ts-expect-error error is not a string
+        apiErrorData?.error?.response?.data?.errors?.join(", ") ||
+        getErrorMessage(apiErrorData);
+    } catch (e) {
+      console.error(`error: ${errorMessage}`, e);
+    }
+    //
+  }, []);
 
   useEffect(() => {
     if (apiErrorData) {

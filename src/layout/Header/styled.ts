@@ -32,12 +32,12 @@ export const Title = styled(Typography)(({ theme }) => ({
   color: theme.palette.text.title,
 }));
 
-export const Actions = styled(Stack)(({ theme }) => ({
+export const Actions = styled(Stack)({
   flexDirection: "row",
   justifyContent: "center",
   alignItems: "center",
   gap: 32,
-}));
+});
 
 export const DesktopOnlyActions = styled(Stack)(({ theme }) => ({
   display: useMediaQuery(theme.breakpoints.down("md")) ? "none" : "flex",

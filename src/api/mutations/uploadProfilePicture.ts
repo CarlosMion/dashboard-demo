@@ -9,11 +9,10 @@ export type UploadProfilePictureVariables = {
   file: File;
 };
 
-export const uploadProfilePicture = async ({
-  file,
-}: UploadProfilePictureVariables): Promise<string> => {
-  return "success";
-};
+export const uploadProfilePicture =
+  async ({}: UploadProfilePictureVariables): Promise<string> => {
+    return "success";
+  };
 
 export const useUploadProfilePicture = (
   options?: BaseMutationOptions<string, UploadProfilePictureVariables>
