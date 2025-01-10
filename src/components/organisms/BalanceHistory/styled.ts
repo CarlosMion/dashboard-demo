@@ -3,6 +3,7 @@
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export const Container = styled(Stack)(({ theme }) => ({
   display: "flex",
@@ -28,5 +29,7 @@ export const Content = styled(Stack)(({ theme }) => ({
   gap: theme.spacing(3),
   backgroundColor: theme.palette.background.paper,
   borderRadius: "25px",
-  padding: `${theme.spacing(4)} ${theme.spacing(2)}`,
+  padding: useMediaQuery(theme.breakpoints.down("md"))
+    ? `${theme.spacing(4)} 0`
+    : `${theme.spacing(4)} ${theme.spacing(2)}`,
 }));

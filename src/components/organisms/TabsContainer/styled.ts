@@ -14,7 +14,6 @@ export const StyledTabsContainer = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
   width: "100%",
   height: "fit-content",
-  backgroudcolor: "red",
   borderRadius: useMediaQuery(theme.breakpoints.down("md")) ? "15px" : "25px",
 }));
 
