@@ -44,6 +44,7 @@ const palette: PaletteOptions = {
     200: "#C8D6E2",
     300: "#A3B8C8",
     400: "#1C1C1C",
+    500: alpha("#FFFFFF", 0.5),
   },
   action: { hover: alpha("#000000", 0.06), selected: alpha("#000000", 0.12) },
   text: {
@@ -55,8 +56,11 @@ const palette: PaletteOptions = {
   background: {
     default: "#F5F7FA",
     paper: "#FFFFFF",
-    blackCard: "linear-gradient(0%, #5B5A6F, #000000)",
-    whiteTransparency: `linear-gradient(0%, #FFFFFF, ${alpha("#FFFFFF", 0)})`,
+    blackCard: "linear-gradient(100deg, #5B5A6F, #000000)",
+    whiteTransparency: `linear-gradient(45deg, ${alpha(
+      "#FFFFFF",
+      0.15
+    )}, ${alpha("#FFFFFF", 0)})`,
   },
   commonColors: {
     depositGreen: "#41D4A8",

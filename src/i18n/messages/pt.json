@@ -39,6 +39,20 @@
             }
         }
     },
+    "card": {
+        "balance": "Saldo",
+        "cardHolder": "Titular",
+        "validThru": "Válido Até"
+    },
+    "dashboard": {
+        "myCards": "Meus Cartões",
+        "recentTransactions": "Transações Recentes",
+        "weeklyActivity": "Atividade Semanal",
+        "expenseStatstics": "Estatísticas de Despesas",
+        "quickTransfer": "Transferência Rápida",
+        "balanceHistory": "Histórico de Saldo",
+        "seeAll": "Ver Tudo"
+    },
     "overview": "Visão geral",
     "profilePicture": "Foto de Perfil",
     "searchForSomething": "Procure por algo",

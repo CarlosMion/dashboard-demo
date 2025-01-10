@@ -8,7 +8,9 @@ import Stack from "@mui/material/Stack";
 import { DRAWER_WIDTH_DESKTOP } from "@/constants";
 
 export const MainContainer = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.background.default,
+  backgroundColor: useMediaQuery(theme.breakpoints.down("md"))
+    ? theme.palette.background.paper
+    : theme.palette.background.default,
   height: "100%",
   width: "100%",
   padding: 0,

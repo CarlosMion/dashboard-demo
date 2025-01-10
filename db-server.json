@@ -35,26 +35,26 @@
         {
             "userId": "1",
             "balance": 1000,
-            "cardNumber": "3778567890121234",
-            "expirationDate": "22-12-0T00:00:00.000Z"
+            "cardNumber": 377856789012123,
+            "expirationDate": "2022-12-22T00:00:00.000Z"
         },
         {
             "userId": "1",
             "balance": 0,
-            "cardNumber": "12345678901237788",
-            "expirationDate": "31-01-0T00:00:00.000Z"
+            "cardNumber": 1234567890123778,
+            "expirationDate": "2030-01-31T00:00:00.000Z"
         },
         {
             "userId": "1",
             "balance": 123.75,
-            "cardNumber": "9134567890124212",
-            "expirationDate": "25-06-0T00:00:00.000Z"
+            "cardNumber": 913456789012421,
+            "expirationDate": "2025-06-25T00:00:00.000Z"
         },
         {
             "userId": "1",
             "balance": 1000,
-            "cardNumber": "4534567890123443",
-            "expirationDate": "29-11-0T00:00:00.000Z"
+            "cardNumber": 453456789012344,
+            "expirationDate": "2029-11-29T00:00:00.000Z"
         }
     ],
     "recentTransactions": [

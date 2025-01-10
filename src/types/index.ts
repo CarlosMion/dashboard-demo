@@ -16,7 +16,7 @@ export interface User {
 export interface CreditCard {
   userId: string;
   balance: number;
-  cardNumber: string;
+  cardNumber: number;
   expirationDate: string;
 }
 

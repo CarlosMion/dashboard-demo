@@ -39,6 +39,20 @@
             }
         }
     },
+    "card": {
+        "balance": "Balance",
+        "cardHolder": "Card Holder",
+        "validThru": "Valid Thru"
+    },
+    "dashboard": {
+        "myCards": "My Cards",
+        "recentTransactions": "Recent Transactions",
+        "weeklyActivity": "Weekly Activity",
+        "expenseStatstics": "Expense Statstics",
+        "quickTransfer": "Quick Transfer",
+        "balanceHistory": "Balance History",
+        "seeAll": "See All"
+    },
     "overview": "Overview",
     "profilePicture": "Profile Picture",
     "searchForSomething": "Search for something",

@@ -18,7 +18,6 @@ export default function SVGContainer({
   const isMobile = useMediaQuery((theme: Theme) =>
     theme.breakpoints.down("md")
   );
-  console.log(isMobile);
   const displayWidth = useMemo(
     () => (isMobile ? (3 * width) / 4 : width),
     [isMobile, width]
