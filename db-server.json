@@ -116,20 +116,20 @@
     ],
     "expenseStatistics": [
         {
-            "category": "Enterntainment",
-            "percentage": 30
+            "name": "Bill Expenses",
+            "value": 15
         },
         {
-            "category": "Investment",
-            "percentage": 20
+            "name": "Enterntainment",
+            "value": 30
         },
         {
-            "category": "Bill Expenses",
-            "percentage": 15
+            "name": "Investment",
+            "value": 20
         },
         {
-            "category": "Others",
-            "percentage": 35
+            "name": "Others",
+            "value": 35
         }
     ],
     "friends": [
@@ -137,29 +137,33 @@
             "userId": "123",
             "name": "Livia Bator",
             "headline": "CEO",
-            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736390592/7de84d22-aa2f-4125-ab20-bd98414bca73.png"
+            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736538018/user-pic-3.png"
         },
         {
             "userId": "234",
             "name": "Randy Press",
             "headline": "Director",
-            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736390592/7de84d22-aa2f-4125-ab20-bd98414bca73.png"
+            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736537992/user-pic-2.png"
         },
         {
             "userId": "345",
             "name": "Workman",
             "headline": "Designer",
-            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736390592/7de84d22-aa2f-4125-ab20-bd98414bca73.png"
+            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736537922/User-pic-1.png"
         }
     ],
     "balanceHistory": [
+        {
+            "date": "Jun",
+            "balance": 50
+        },
         {
             "date": "Jul",
             "balance": 1000
         },
         {
             "date": "Aug",
-            "balance": 1500
+            "balance": 500
         },
         {
             "date": "Sep",
@@ -175,11 +179,11 @@
         },
         {
             "date": "Dec",
-            "balance": 900
+            "balance": 1725
         },
         {
             "date": "Jan",
-            "balance": 800
+            "balance": 2150
         }
     ]
 }

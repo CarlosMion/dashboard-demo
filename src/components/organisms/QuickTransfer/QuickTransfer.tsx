@@ -18,7 +18,6 @@ export default function QuickTransfer() {
   const t = useTranslations("dashboard");
 
   const { data: friends, isLoading } = useGetFriendsQuery({});
-  console.log(friends);
   return (
     <Container>
       <Text variant="h2">{t("quickTransfer")}</Text>

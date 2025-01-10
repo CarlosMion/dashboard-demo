@@ -17,6 +17,8 @@ export const Title = styled(Typography)(({ theme }) => ({
   color: theme.palette.text.primary,
   fontWeight: 400,
   textAlign: "center",
+  whiteSpace: "nowrap",
+  lineClamp: 1,
 }));
 
 export const Headline = styled(Typography)(({ theme }) => ({

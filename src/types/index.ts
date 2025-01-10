@@ -40,8 +40,8 @@ export interface WeeklyActivity {
 }
 
 export interface ExpenseStatistic {
-  category: string;
-  percentage: number;
+  name: string;
+  value: number;
 }
 
 export interface Friend {

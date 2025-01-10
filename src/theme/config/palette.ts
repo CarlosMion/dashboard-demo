@@ -4,6 +4,7 @@ declare module "@mui/material/styles/createPalette" {
   interface TypeBackground {
     blackCard: string;
     whiteTransparency: string;
+    blueAreaChart: string;
   }
 
   interface TypeText {
@@ -18,6 +19,7 @@ declare module "@mui/material/styles/createPalette" {
     teal: string;
     mustardYellow: string;
     lightYellow: string;
+    blue: string;
   }
 }
 
@@ -29,6 +31,7 @@ const palette: PaletteOptions = {
     black: "#000000",
     white: "#FFFFFF",
     depositGreen: "#41D4A8",
+    blue: "#2D60FF",
     withdrawRed: "#FF4B4A",
     orange: "#FC7900",
     lightGreen: "#DCFAF8",
@@ -60,6 +63,10 @@ const palette: PaletteOptions = {
     default: "#F5F7FA",
     paper: "#FFFFFF",
     blackCard: "linear-gradient(100deg, #5B5A6F, #000000)",
+    blueAreaChart: `linear-gradient(180deg, ${alpha(
+      "#2D60FF",
+      0.8
+    )} 5%, ${alpha("#2D60FF", 0.1)} 95%)`,
     whiteTransparency: `linear-gradient(45deg, ${alpha(
       "#FFFFFF",
       0.15
