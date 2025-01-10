@@ -36,18 +36,20 @@ export default function EditProfilePicture({ user }: EditProfilePictureProps) {
 
   const editImageHandler = useCallback(
     async (imageUrl: string, file: File): Promise<void> => {
-      const resultBlob: Blob = await NiceModal.show(EditImageDialog, {
-        imageUrl,
-      });
-      const resultImage = URL.createObjectURL(resultBlob);
-
-      if (resultImage) {
-        const resultFile = blobToFile(resultBlob, file.name);
-        await uploadProfilePictureMutation.mutateAsync({
-          file: resultFile,
+      try {
+        const resultBlob: Blob = await NiceModal.show(EditImageDialog, {
+          imageUrl,
         });
-        toast.success(t("profilePictureUpdated"));
-      }
+        const resultImage = URL.createObjectURL(resultBlob);
+
+        if (resultImage) {
+          const resultFile = blobToFile(resultBlob, file.name);
+          await uploadProfilePictureMutation.mutateAsync({
+            file: resultFile,
+          });
+          toast.success(t("profilePictureUpdated"));
+        }
+      } catch (_e) {}
     },
     [uploadProfilePictureMutation, t]
   );

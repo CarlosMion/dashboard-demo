@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { IconButton } from "@mui/material";
+import { SwiperSlide } from "swiper/react";
 
 export const Container = styled(Stack)(({ theme }) => ({
   display: "flex",
@@ -49,3 +50,9 @@ export const Content = styled(Stack)(({ theme }) => ({
   borderRadius: "25px",
   padding: `${theme.spacing(4)} ${theme.spacing(2)}`,
 }));
+
+export const Slide = styled(SwiperSlide)({
+  display: "flex",
+  height: "100%",
+  width: "100%",
+});

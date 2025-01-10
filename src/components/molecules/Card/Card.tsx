@@ -33,7 +33,7 @@ export default function Card({ card, variant = "dark" }: CardProps) {
         size={9.5}
         sx={{
           paddingTop: theme.spacing(2),
-          paddingLeft: { xs: theme.spacing(1.5), md: theme.spacing(3) },
+          paddingLeft: theme.spacing(3),
         }}
       >
         <CardBalance

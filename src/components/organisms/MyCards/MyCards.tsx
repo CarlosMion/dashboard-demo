@@ -52,25 +52,20 @@ export default function MyCards() {
           2500: { slidesPerView: 4 },
         }}
       >
-        {isLoading ? (
-          <>
-            <Slide>
-              <CardSkeleton />
-            </Slide>
-            <Slide>
-              <CardSkeleton />
-            </Slide>
-            <Slide>
-              <CardSkeleton />
-            </Slide>
-          </>
-        ) : (
-          (creditCards || []).map((card, index) => (
-            <Slide key={`creditCard-${index}`}>
-              <Card card={card} variant={index % 2 !== 1 ? "dark" : "light"} />
-            </Slide>
-          ))
-        )}
+        {isLoading
+          ? Array.from({ length: 3 }).map((_, index) => (
+              <Slide key={index}>
+                <CardSkeleton />
+              </Slide>
+            ))
+          : (creditCards || []).map((card, index) => (
+              <Slide key={`creditCard-${index}`}>
+                <Card
+                  card={card}
+                  variant={index % 2 !== 1 ? "dark" : "light"}
+                />
+              </Slide>
+            ))}
       </Swiper>
     </Container>
   );

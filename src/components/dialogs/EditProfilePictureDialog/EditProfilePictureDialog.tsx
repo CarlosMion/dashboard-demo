@@ -86,7 +86,15 @@ const EditImageDialog: FunctionComponent<EditImageDialogProps> =
         </DialogTitle>
 
         <DialogContent sx={{ p: 0 }}>
-          <Box sx={{ px: 8, pt: { xs: 7, md: 2 }, pb: { xs: 8, md: 10 } }}>
+          <Box
+            sx={{
+              px: 8,
+              pt: { xs: 7, md: 2 },
+              pb: { xs: 8, md: 10 },
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
             <Box
               sx={{ width: "100%", paddingTop: "100%", position: "relative" }}
             >

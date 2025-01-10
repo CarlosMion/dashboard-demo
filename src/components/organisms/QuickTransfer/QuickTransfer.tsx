@@ -6,6 +6,7 @@ import {
   OptionsContainer,
   FloatingButton,
   Content,
+  Slide,
 } from "./styled";
 import { useTranslations } from "next-intl";
 import { useGetFriendsQuery } from "@/api/requests/getFriends";
@@ -24,20 +25,18 @@ export default function QuickTransfer() {
 
       <Content>
         <OptionsContainer>
-          {isLoading ? (
-            <>
-              <UserSelectorSkeleton />
-              <UserSelectorSkeleton />
-              <UserSelectorSkeleton />
-            </>
-          ) : (
-            (friends || []).map((friend) => (
-              <UserSelector
-                key={`user-selector-${friend.userId}`}
-                user={friend}
-              />
-            ))
-          )}
+          {isLoading
+            ? Array.from({ length: 3 }).map((_, index) => (
+                <Slide key={index}>
+                  <UserSelectorSkeleton />
+                </Slide>
+              ))
+            : (friends || []).map((friend) => (
+                <UserSelector
+                  key={`user-selector-${friend.userId}`}
+                  user={friend}
+                />
+              ))}
           <FloatingButton>
             <ChevronRight />
           </FloatingButton>

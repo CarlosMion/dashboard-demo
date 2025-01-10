@@ -25,6 +25,7 @@ export const FormButton = styled(Button)(({ theme }) => ({
 export const Container = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: useMediaQuery(theme.breakpoints.down("md")) ? "column" : "row",
+  paddingTop: theme.spacing(3),
 }));
 
 export const FullWidthButtonContainer = styled(Box)(({ theme }) => ({

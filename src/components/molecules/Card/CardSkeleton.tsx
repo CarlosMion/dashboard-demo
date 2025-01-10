@@ -1,40 +1,54 @@
 import React from "react";
 import Skeleton from "@mui/material/Skeleton";
-import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid2";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import { Container, GridContent } from "./styled";
+import { useTheme } from "@mui/material";
 
-const CardSkeletonContainer = styled("div")(({ theme }) => ({
-  padding: theme.spacing(2),
-  borderRadius: theme.shape.borderRadius,
-  boxShadow: theme.shadows[1],
-  backgroundColor: theme.palette.background.paper,
-  width: useMediaQuery(theme.breakpoints.down("md")) ? "265px" : "350px",
-  margin: "auto",
-}));
+export default function CardSkeleton() {
+  const theme = useTheme();
 
-const CardSkeleton = () => {
   return (
-    <CardSkeletonContainer>
-      <Grid container spacing={2}>
-        <Grid size={12}>
-          <Skeleton variant="text" width="60%" height={30} />
-        </Grid>
-        <Grid size={6}>
-          <Skeleton variant="text" width="80%" height={20} />
-        </Grid>
-        <Grid size={6}>
-          <Skeleton variant="text" width="80%" height={20} />
-        </Grid>
-        <Grid size={12}>
-          <Skeleton variant="text" width="100%" height={30} />
-        </Grid>
-        <Grid size={12}>
-          <Skeleton variant="rectangular" width="100%" height={40} />
-        </Grid>
+    <Container container variant="dark">
+      <GridContent
+        size={9.5}
+        sx={{
+          paddingTop: theme.spacing(2),
+          paddingLeft: { xs: theme.spacing(1.5), md: theme.spacing(3) },
+        }}
+      >
+        <Skeleton variant="text" width={100} height={20} />
+        <Skeleton variant="rectangular" width="100%" height={15} />
+      </GridContent>
+      <GridContent
+        size={2.5}
+        sx={{
+          paddingTop: theme.spacing(2.5),
+        }}
+      >
+        <Skeleton variant="circular" width={40} height={30} />
+      </GridContent>
+      <GridContent
+        size={5}
+        sx={{
+          paddingTop: theme.spacing(2),
+          paddingLeft: { xs: theme.spacing(3), md: theme.spacing(3) },
+        }}
+      >
+        <Skeleton variant="text" width={100} height={20} />
+        <Skeleton variant="text" width="80%" height={20} />
+      </GridContent>
+      <GridContent size={5}>
+        <Skeleton variant="text" width={100} height={20} />
+        <Skeleton variant="text" width="80%" height={20} />
+      </GridContent>
+      <Grid size={12}>
+        <Skeleton
+          variant="rectangular"
+          width="100%"
+          height={30}
+          sx={{ borderRadius: "0 0 25px 25px" }}
+        />
       </Grid>
-    </CardSkeletonContainer>
+    </Container>
   );
-};
-
-export default CardSkeleton;
+}
