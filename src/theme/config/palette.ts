@@ -51,6 +51,7 @@ const palette: PaletteOptions = {
     300: "#A3B8C8",
     400: "#1C1C1C",
     500: alpha("#FFFFFF", 0.5),
+    600: "#E7E4E8",
   },
   action: { hover: alpha("#000000", 0.06), selected: alpha("#000000", 0.12) },
   text: {
