@@ -136,17 +136,20 @@
         {
             "userId": "123",
             "name": "Livia Bator",
-            "headline": "CEO"
+            "headline": "CEO",
+            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736390592/7de84d22-aa2f-4125-ab20-bd98414bca73.png"
         },
         {
             "userId": "234",
             "name": "Randy Press",
-            "headline": "Director"
+            "headline": "Director",
+            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736390592/7de84d22-aa2f-4125-ab20-bd98414bca73.png"
         },
         {
             "userId": "345",
             "name": "Workman",
-            "headline": "Designer"
+            "headline": "Designer",
+            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736390592/7de84d22-aa2f-4125-ab20-bd98414bca73.png"
         }
     ],
     "balanceHistory": [

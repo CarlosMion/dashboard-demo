@@ -42,6 +42,7 @@ export interface Friend {
   userId: string;
   name: string;
   headline: string;
+  pictureUrl: string;
 }
 
 export interface BalanceHistory {
