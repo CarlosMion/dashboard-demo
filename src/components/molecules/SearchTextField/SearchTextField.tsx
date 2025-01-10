@@ -40,7 +40,7 @@ export default function SearchTextField({
         onDismiss?.();
       }
     },
-    []
+    [onDismiss]
   );
 
   const clickAwayHandler = useCallback((): void => {

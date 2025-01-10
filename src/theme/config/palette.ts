@@ -4,6 +4,7 @@ declare module "@mui/material/styles/createPalette" {
   interface TypeBackground {
     blackCard: string;
     whiteTransparency: string;
+    blueAreaChart: string;
   }
 
   interface TypeText {
@@ -18,10 +19,7 @@ declare module "@mui/material/styles/createPalette" {
     teal: string;
     mustardYellow: string;
     lightYellow: string;
-  }
-
-  interface PaletteOptions {
-    commonColors?: Partial<CommonColors>;
+    blue: string;
   }
 }
 
@@ -32,6 +30,14 @@ const palette: PaletteOptions = {
   common: {
     black: "#000000",
     white: "#FFFFFF",
+    depositGreen: "#41D4A8",
+    blue: "#2D60FF",
+    withdrawRed: "#FF4B4A",
+    orange: "#FC7900",
+    lightGreen: "#DCFAF8",
+    teal: "#16DBCC",
+    mustardYellow: "#FFBB38",
+    lightYellow: "#FFF5D9",
   },
   primary: {
     main: "#396AFF",
@@ -44,6 +50,7 @@ const palette: PaletteOptions = {
     200: "#C8D6E2",
     300: "#A3B8C8",
     400: "#1C1C1C",
+    500: alpha("#FFFFFF", 0.5),
   },
   action: { hover: alpha("#000000", 0.06), selected: alpha("#000000", 0.12) },
   text: {
@@ -55,17 +62,15 @@ const palette: PaletteOptions = {
   background: {
     default: "#F5F7FA",
     paper: "#FFFFFF",
-    blackCard: "linear-gradient(0%, #5B5A6F, #000000)",
-    whiteTransparency: `linear-gradient(0%, #FFFFFF, ${alpha("#FFFFFF", 0)})`,
-  },
-  commonColors: {
-    depositGreen: "#41D4A8",
-    withdrawRed: "#FF5C93",
-    orange: "#FC7900",
-    lightGreen: "#DCFAF8",
-    teal: "#16DBCC",
-    mustardYellow: "#FFBB38",
-    lightYellow: "#FFF5D9",
+    blackCard: "linear-gradient(100deg, #5B5A6F, #000000)",
+    blueAreaChart: `linear-gradient(180deg, ${alpha(
+      "#2D60FF",
+      0.8
+    )} 5%, ${alpha("#2D60FF", 0.1)} 95%)`,
+    whiteTransparency: `linear-gradient(45deg, ${alpha(
+      "#FFFFFF",
+      0.15
+    )}, ${alpha("#FFFFFF", 0)})`,
   },
 };
 

@@ -16,7 +16,7 @@ type Variables = object;
 
 export const getFriends = async (): Promise<Friend[]> => {
   try {
-    const result = await fetcher<Friend[]>("Friends", {
+    const result = await fetcher<Friend[]>("friends", {
       method: "GET",
     });
     return result;

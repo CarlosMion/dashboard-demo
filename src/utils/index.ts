@@ -1,4 +1,5 @@
 import { isEdge } from "./userAgentUtils";
+import { maskCardNumber } from "./stringUtils";
 import { toCamelCase } from "./pathUtils";
 import fetcher from "./fetchWrapper";
 import {
@@ -41,4 +42,5 @@ export {
   rotateSize,
   getRadianAngle,
   createImage,
+  maskCardNumber,
 };

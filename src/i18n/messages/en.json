@@ -39,11 +39,29 @@
             }
         }
     },
+    "card": {
+        "balance": "Balance",
+        "cardHolder": "Card Holder",
+        "validThru": "Valid Thru"
+    },
+    "dashboard": {
+        "myCards": "My Cards",
+        "recentTransactions": "Recent Transactions",
+        "weeklyActivity": "Weekly Activity",
+        "expenseStatistics": "Expense Statstics",
+        "quickTransfer": "Quick Transfer",
+        "balanceHistory": "Balance History",
+        "seeAll": "See All"
+    },
     "overview": "Overview",
     "profilePicture": "Profile Picture",
     "searchForSomething": "Search for something",
     "youHaveNoNewNotifications": "You have no new notifications",
     "editMedia": "Edit Media",
     "apply": "Apply",
-    "profilePictureUpdated": "Profile picture updated"
+    "profilePictureUpdated": "Profile picture updated",
+    "writeAmount": "Write amount",
+    "send": "Send",
+    "moneySentSuccessfully": "Money sent successfully",
+    "amount": "Amount"
 }

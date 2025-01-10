@@ -35,44 +35,44 @@
         {
             "userId": "1",
             "balance": 1000,
-            "cardNumber": "3778567890121234",
-            "expirationDate": "22-12-0T00:00:00.000Z"
+            "cardNumber": 3778567890121235,
+            "expirationDate": "2022-12-22T00:00:00.000Z"
         },
         {
             "userId": "1",
             "balance": 0,
-            "cardNumber": "12345678901237788",
-            "expirationDate": "31-01-0T00:00:00.000Z"
+            "cardNumber": 1234567890123778,
+            "expirationDate": "2030-01-31T00:00:00.000Z"
         },
         {
             "userId": "1",
             "balance": 123.75,
-            "cardNumber": "9134567890124212",
-            "expirationDate": "25-06-0T00:00:00.000Z"
+            "cardNumber": 9134567890124215,
+            "expirationDate": "2025-06-25T00:00:00.000Z"
         },
         {
             "userId": "1",
             "balance": 1000,
-            "cardNumber": "4534567890123443",
-            "expirationDate": "29-11-0T00:00:00.000Z"
+            "cardNumber": 4534567890123441,
+            "expirationDate": "2029-11-29T00:00:00.000Z"
         }
     ],
     "recentTransactions": [
         {
-            "title": "Withdraw from my card",
+            "title": "Credit Card Payment",
             "source": "card",
             "amount": -850,
             "date": "2021-01-28T00:00:00.000Z"
         },
         {
             "title": "Deposit Paypal",
-            "source": "paypal",
+            "source": "bank",
             "amount": 2500,
             "date": "2021-01-25T00:00:00.000Z"
         },
         {
             "title": "Jemi Wilson",
-            "source": "user",
+            "source": "person",
             "amount": 5400,
             "date": "2021-01-25T00:00:00.000Z"
         }
@@ -116,20 +116,20 @@
     ],
     "expenseStatistics": [
         {
-            "category": "Enterntainment",
-            "percentage": 30
+            "name": "Bill Expenses",
+            "value": 15
         },
         {
-            "category": "Investment",
-            "percentage": 20
+            "name": "Enterntainment",
+            "value": 30
         },
         {
-            "category": "Bill Expenses",
-            "percentage": 15
+            "name": "Investment",
+            "value": 20
         },
         {
-            "category": "Others",
-            "percentage": 35
+            "name": "Others",
+            "value": 35
         }
     ],
     "friends": [
@@ -137,29 +137,33 @@
             "userId": "123",
             "name": "Livia Bator",
             "headline": "CEO",
-            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736390592/7de84d22-aa2f-4125-ab20-bd98414bca73.png"
+            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736538018/user-pic-3.png"
         },
         {
             "userId": "234",
             "name": "Randy Press",
             "headline": "Director",
-            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736390592/7de84d22-aa2f-4125-ab20-bd98414bca73.png"
+            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736537992/user-pic-2.png"
         },
         {
             "userId": "345",
             "name": "Workman",
             "headline": "Designer",
-            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736390592/7de84d22-aa2f-4125-ab20-bd98414bca73.png"
+            "pictureUrl": "https://res.cloudinary.com/magicall/image/upload/v1736537922/User-pic-1.png"
         }
     ],
     "balanceHistory": [
+        {
+            "date": "Jun",
+            "balance": 50
+        },
         {
             "date": "Jul",
             "balance": 1000
         },
         {
             "date": "Aug",
-            "balance": 1500
+            "balance": 500
         },
         {
             "date": "Sep",
@@ -175,11 +179,11 @@
         },
         {
             "date": "Dec",
-            "balance": 900
+            "balance": 1725
         },
         {
             "date": "Jan",
-            "balance": 800
+            "balance": 2150
         }
     ]
 }

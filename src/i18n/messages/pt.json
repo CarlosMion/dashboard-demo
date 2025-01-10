@@ -39,11 +39,29 @@
             }
         }
     },
+    "card": {
+        "balance": "Saldo",
+        "cardHolder": "Titular",
+        "validThru": "Válido Até"
+    },
+    "dashboard": {
+        "myCards": "Meus Cartões",
+        "recentTransactions": "Transações Recentes",
+        "weeklyActivity": "Atividade Semanal",
+        "expenseStatistics": "Estatísticas de Despesas",
+        "quickTransfer": "Transferência Rápida",
+        "balanceHistory": "Histórico de Saldo",
+        "seeAll": "Ver Tudo"
+    },
     "overview": "Visão geral",
     "profilePicture": "Foto de Perfil",
     "searchForSomething": "Procure por algo",
     "youHaveNoNewNotifications": "Você não tem novas notificações",
     "editMedia": "Editar Mídia",
     "apply": "Aplicar",
-    "profilePictureUpdated": "Foto de perfil atualizada"
+    "profilePictureUpdated": "Foto de perfil atualizada",
+    "writeAmount": "Escreva o valor",
+    "send": "Enviar",
+    "moneySentSuccessfully": "Dinheiro enviado com sucesso",
+    "amount": "Quantia"
 }

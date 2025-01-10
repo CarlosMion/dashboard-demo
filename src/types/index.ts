@@ -16,13 +16,19 @@ export interface User {
 export interface CreditCard {
   userId: string;
   balance: number;
-  cardNumber: string;
+  cardNumber: number;
   expirationDate: string;
+}
+
+export enum TransactionSource {
+  CARD = "card",
+  BANK = "bank",
+  PERSON = "person",
 }
 
 export interface RecentTransaction {
   title: string;
-  source: string;
+  source: TransactionSource;
   amount: number;
   date: string;
 }
@@ -34,8 +40,8 @@ export interface WeeklyActivity {
 }
 
 export interface ExpenseStatistic {
-  category: string;
-  percentage: number;
+  name: string;
+  value: number;
 }
 
 export interface Friend {

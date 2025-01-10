@@ -6,7 +6,7 @@ const breakpoints: Omit<
 > = {
   values: {
     xs: 0,
-    sm: 640,
+    sm: 720,
     md: 1024,
     lg: 1200,
     xl: 1536,
