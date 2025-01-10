@@ -12,6 +12,9 @@ import TransactionsIcon from "./TransactionsIcon";
 import NotificationsIcon from "./NotificationsIcon";
 import EditIcon from "./EditIcon";
 import ChipCardIcon from "./ChipCardIcon";
+import BankIcon from "./BankIcon";
+import CardsIcon from "./CardsIcon";
+import UserTransactionIcon from "./UserTransactionIcon";
 
 export {
   SoarTaskIcon,
@@ -28,4 +31,7 @@ export {
   NotificationsIcon,
   EditIcon,
   ChipCardIcon,
+  BankIcon,
+  CardsIcon,
+  UserTransactionIcon,
 };

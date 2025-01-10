@@ -20,9 +20,11 @@ export interface CreditCard {
   expirationDate: string;
 }
 
+export type TransactionSource = "card" | "bank" | "person";
+
 export interface RecentTransaction {
   title: string;
-  source: string;
+  source: TransactionSource;
   amount: number;
   date: string;
 }

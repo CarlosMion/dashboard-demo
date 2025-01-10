@@ -66,13 +66,13 @@
         },
         {
             "title": "Deposit Paypal",
-            "source": "paypal",
+            "source": "bank",
             "amount": 2500,
             "date": "2021-01-25T00:00:00.000Z"
         },
         {
             "title": "Jemi Wilson",
-            "source": "user",
+            "source": "person",
             "amount": 5400,
             "date": "2021-01-25T00:00:00.000Z"
         }
