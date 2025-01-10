@@ -29,7 +29,14 @@
             "city": "Cidade",
             "postalCode": "Código Postal",
             "country": "País",
-            "save": "Salvar"
+            "save": "Salvar",
+            "errors": {
+                "fieldRequired": "{field} é obrigatório",
+                "invalidField": "{field} inválido",
+                "mustContainLettersAndNumbers": "{field} deve conter letras e números",
+                "mustContainOnlyLettersAndNumbers": "{field} deve conter apenas letras e números",
+                "fieldMustContainAtLeast": "{field} deve conter pelo menos {min} caracteres"
+            }
         }
     },
     "overview": "Visão geral",

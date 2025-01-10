@@ -9,7 +9,6 @@ export const PLACEHOLDER_PROFILE_PICTURE =
 export const POSTAL_CODE_REGEX_VALIDATION = /^\d{5}(-\d{4})?$/;
 export const EMAIL_REGEX_VALIDATION =
   /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-export const FULL_NAME_REGEX_VALIDATION = /^[a-zA-Z0-9]+$/;
 
 export const PASSWORD_MIN_LENGTH = 8;
 

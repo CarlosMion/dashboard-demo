@@ -33,6 +33,7 @@
             "errors": {
                 "fieldRequired": "{field} is required",
                 "invalidField": "Invalid {field}",
+                "mustContainLettersAndNumbers": "{field} must contain letters and numbers",
                 "mustContainOnlyLettersAndNumbers": "{field} must contain only letters and numbers",
                 "fieldMustContainAtLeast": "{field} must contain at least {min} characters"
             }

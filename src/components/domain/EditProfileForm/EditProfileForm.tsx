@@ -6,9 +6,6 @@ import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 
 import Grid from "@mui/material/Grid2";
-// import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-// import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-// import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { User } from "@/types";
 import FormField from "@/components/molecules/FormField";
 import { useTranslations } from "next-intl";
@@ -20,13 +17,15 @@ import {
   POSTAL_CODE_REGEX_VALIDATION,
 } from "@/constants";
 import { Container, FormButton, FullWidthButtonContainer } from "./styled";
+import dayjs, { Dayjs } from "dayjs";
+import FormDatePicker from "@/components/molecules/FormDatePicker";
 
 interface ProfileFormData {
   fullName: string;
   userName: string;
   email: string;
   password: string;
-  birthDate: Date;
+  birthDate: Dayjs;
   currentAddress: string;
   permanentAddress: string;
   city: string;
@@ -52,7 +51,7 @@ const ProfileForm = ({ user }: ProfileFormProps) => {
       userName: user?.userName,
       email: user?.email,
       password: user?.password,
-      birthDate: new Date(user?.birthDate || ""),
+      birthDate: dayjs(user?.birthDate || ""),
       currentAddress: user?.currentAddress,
       permanentAddress: user?.permanentAddress,
       city: user?.city,
@@ -69,7 +68,6 @@ const ProfileForm = ({ user }: ProfileFormProps) => {
     console.log(data);
     // Handle form submission
   };
-
   return (
     <Container>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -83,12 +81,6 @@ const ProfileForm = ({ user }: ProfileFormProps) => {
             helperText={errors.fullName?.message}
             rules={{
               required: t("errors.fieldRequired", { field: t("yourName") }),
-              pattern: {
-                value: FULL_NAME_REGEX_VALIDATION,
-                message: t("errors.mustContainOnlyLettersAndNumbers", {
-                  field: t("yourName"),
-                }),
-              },
             }}
           />
 
@@ -146,28 +138,12 @@ const ProfileForm = ({ user }: ProfileFormProps) => {
             type="password"
           />
 
-          <Grid size={6}>
-            {/* <LocalizationProvider dateAdapter={AdapterDayjs}> */}
-            {/* <Controller
-                name="birthDate"
-                control={control}
-                rules={{ required: "Birth date is required" }}
-                render={({ field }) => (
-                  <DatePicker
-                    {...field}
-                    label="Birth Date"
-                    slotProps={{
-                      textField: {
-                        fullWidth: true,
-                        error: !!errors.birthDate,
-                        helperText: errors.birthDate?.message,
-                      },
-                    }}
-                  />
-                )}
-              /> */}
-            {/* </LocalizationProvider> */}
-          </Grid>
+          <FormDatePicker
+            label={t("dateOfBirth")}
+            controllerName="birthDate"
+            control={control}
+            fieldSize={fieldSize}
+          />
 
           <FormField
             label={t("presentAddress")}
