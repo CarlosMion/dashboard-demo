@@ -10,6 +10,9 @@ import QuickTransfer from "@/components/organisms/QuickTransfer";
 import ExpenseStatistics from "@/components/organisms/ExpenseStatistics";
 import WeeklyActivity from "@/components/organisms/WeeklyActivity";
 import BalanceHistory from "@/components/organisms/BalanceHistory";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Container = styled(Grid)(({ theme }) => ({
   width: "100%",
@@ -26,10 +29,10 @@ export default function Home() {
   );
   return (
     <Container container spacing={3}>
-      <Grid size={isMobile ? 12 : 8.5}>
+      <Grid size={isMobile ? 12 : 8}>
         <MyCards />
       </Grid>
-      <Grid size={isMobile ? 12 : 3.5}>
+      <Grid size={isMobile ? 12 : 4}>
         <RecentTransactions />
       </Grid>
       <Grid size={isMobile ? 12 : 8}>

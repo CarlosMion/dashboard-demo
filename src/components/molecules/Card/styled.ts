@@ -20,7 +20,7 @@ export const Container = styled(Grid)<ContainerProps>(({ theme, variant }) => ({
       : theme.palette.background.paper,
   borderRadius: "25px",
   paddingTop: theme.spacing(1),
-  width: useMediaQuery(theme.breakpoints.down("md")) ? "250px" : "350px",
+  minWidth: useMediaQuery(theme.breakpoints.down("md")) ? "270px" : "360px",
 }));
 
 export const GridContent = styled(Grid)(({ theme }) => ({

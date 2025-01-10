@@ -1,22 +1,20 @@
 "use client";
 
 import Card from "@/components/molecules/Card";
-import { Text, Container, Header, CardRow } from "./styled";
+import { Text, Container, Header, Slide } from "./styled";
 import { useLocale, useTranslations } from "next-intl";
 import { useGetCreditCardsQuery } from "@/api/requests/getCreditCards";
-import { MY_CARDS_LIMIT } from "@/constants";
 import Link from "next/link";
 import { Button } from "@mui/material";
 import { generatePath, routes } from "@/routes";
 import { useMemo } from "react";
 import CardSkeleton from "@/components/molecules/Card/CardSkeleton";
-import { CreditCard } from "@/types";
+import { Swiper } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-interface MyCardsProps {
-  displayMode?: "all" | "limited";
-}
-
-export default function MyCards({ displayMode = "limited" }: MyCardsProps) {
+export default function MyCards() {
   const t = useTranslations("dashboard");
 
   const { data: creditCards, isLoading } = useGetCreditCardsQuery({});
@@ -27,46 +25,53 @@ export default function MyCards({ displayMode = "limited" }: MyCardsProps) {
     [locale]
   );
 
-  const creditCardsToDisplay = useMemo<CreditCard[]>(
-    () =>
-      displayMode === "all"
-        ? creditCards || []
-        : (creditCards || [])?.slice(0, MY_CARDS_LIMIT),
-    [creditCards, displayMode]
-  );
-
   return (
     <Container>
-      {displayMode === "limited" && (
-        <Header>
-          <Text variant="h2">{t("myCards")}</Text>
+      <Header>
+        <Text variant="h2">{t("myCards")}</Text>
 
-          <Button
-            component={Link}
-            href={creditCardsUrl}
-            variant="text"
-            sx={{ textTransform: "none" }}
-          >
-            <Text variant="subtitle1">{t("seeAll")}</Text>
-          </Button>
-        </Header>
-      )}
-      <CardRow mode={displayMode}>
+        <Button
+          component={Link}
+          href={creditCardsUrl}
+          variant="text"
+          sx={{ textTransform: "none" }}
+        >
+          <Text variant="subtitle1">{t("seeAll")}</Text>
+        </Button>
+      </Header>
+
+      <Swiper
+        // slidesPerView={"auto"}
+        spaceBetween={20}
+        style={{ width: "100%", flex: 1, display: "flex" }}
+        breakpoints={{
+          0: { slidesPerView: 1.4 },
+          1200: { slidesPerView: 2.1 },
+          1900: { slidesPerView: 3 },
+          2200: { slidesPerView: 3.5 },
+          2500: { slidesPerView: 4 },
+        }}
+      >
         {isLoading ? (
           <>
-            <CardSkeleton />
-            <CardSkeleton />
+            <Slide>
+              <CardSkeleton />
+            </Slide>
+            <Slide>
+              <CardSkeleton />
+            </Slide>
+            <Slide>
+              <CardSkeleton />
+            </Slide>
           </>
         ) : (
-          creditCardsToDisplay.map((card, index) => (
-            <Card
-              key={`creditCard-${index}`}
-              card={card}
-              variant={index % 2 !== 1 ? "dark" : "light"}
-            />
+          (creditCards || []).map((card, index) => (
+            <Slide key={`creditCard-${index}`}>
+              <Card card={card} variant={index % 2 !== 1 ? "dark" : "light"} />
+            </Slide>
           ))
         )}
-      </CardRow>
+      </Swiper>
     </Container>
   );
 }

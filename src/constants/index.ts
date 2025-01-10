@@ -14,5 +14,3 @@ export const PASSWORD_MIN_LENGTH = 8;
 
 export const PASSWORD_REGEX_VALIDATION =
   /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-
-export const MY_CARDS_LIMIT = 2;
