@@ -10,6 +10,7 @@ import SettingsSolidIcon from "./SettingsSolidIcon";
 import SettingsOutlinedIcon from "./SettingsOutlinedIcon";
 import TransactionsIcon from "./TransactionsIcon";
 import NotificationsIcon from "./NotificationsIcon";
+import EditIcon from "./EditIcon";
 
 export {
   SoarTaskIcon,
@@ -24,4 +25,5 @@ export {
   SettingsOutlinedIcon,
   TransactionsIcon,
   NotificationsIcon,
+  EditIcon,
 };

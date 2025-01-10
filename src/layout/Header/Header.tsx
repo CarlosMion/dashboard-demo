@@ -3,10 +3,13 @@
 import {
   ActionButton,
   Actions,
-  Container,
+  MainContentContainer,
   DesktopOnlyActions,
-  DesktopOnlyMenu,
+  MobileOnly,
+  SmallMenuIcon,
   Title,
+  Container,
+  MobileOnlyButton,
 } from "./styled";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
@@ -16,13 +19,13 @@ import { toCamelCase } from "@/utils/pathUtils";
 import ProfilePicture from "@/components/atoms/ProfilePicture";
 import SearchTextField from "@/components/molecules/SearchTextField";
 import { useGetUserByIdQuery } from "@/api/requests/getUserByIdentifier";
-import MenuIcon from "@mui/icons-material/Menu";
 import {
   NotificationsIcon,
   SettingsOutlinedIcon,
 } from "@/components/atoms/icons";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
+import { DEFAULT_USER_ID } from "@/constants";
 
 interface HeaderProps {
   toggleDrawer: () => void;
@@ -35,7 +38,7 @@ export default function Header({ toggleDrawer }: HeaderProps) {
   const locale = useLocale();
 
   const { data: loggedInUser, isLoading } = useGetUserByIdQuery({
-    userId: "1",
+    userId: DEFAULT_USER_ID,
   });
 
   const pathKey = useMemo(
@@ -65,29 +68,34 @@ export default function Header({ toggleDrawer }: HeaderProps) {
 
   return (
     <Container>
-      <DesktopOnlyMenu onClick={toggleDrawer}>
-        <MenuIcon />
-      </DesktopOnlyMenu>
-      <Title variant="h1">{t(`drawer.${titleKey}`)}</Title>
-      <Actions>
-        <DesktopOnlyActions>
-          <SearchTextField />
-          <ActionButton onClick={goToSettings}>
-            <SettingsOutlinedIcon />
-          </ActionButton>
-          <ActionButton
-            onClick={() => toast.info(t("youHaveNoNewNotifications"))}
-          >
-            <NotificationsIcon />
-          </ActionButton>
-        </DesktopOnlyActions>
-        {!isLoading && (
-          <ProfilePicture
-            title={profilePictureAlt}
-            src={loggedInUser?.profilePictureUrl}
-          />
-        )}
-      </Actions>
+      <MainContentContainer>
+        <MobileOnlyButton onClick={toggleDrawer}>
+          <SmallMenuIcon />
+        </MobileOnlyButton>
+        <Title variant="h1">{t(`drawer.${titleKey}`)}</Title>
+        <Actions>
+          <DesktopOnlyActions>
+            <SearchTextField />
+            <ActionButton onClick={goToSettings}>
+              <SettingsOutlinedIcon />
+            </ActionButton>
+            <ActionButton
+              onClick={() => toast.info(t("youHaveNoNewNotifications"))}
+            >
+              <NotificationsIcon />
+            </ActionButton>
+          </DesktopOnlyActions>
+          {!isLoading && (
+            <ProfilePicture
+              title={profilePictureAlt}
+              src={loggedInUser?.profilePictureUrl}
+            />
+          )}
+        </Actions>
+      </MainContentContainer>
+      <MobileOnly>
+        <SearchTextField sx={{ width: "100%" }} />
+      </MobileOnly>
     </Container>
   );
 }

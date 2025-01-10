@@ -1,7 +1,7 @@
 {
     "drawer": {
         "soarTask": "Teste da Soar",
-        "dashboard": "Painel de Controle",
+        "dashboard": "Visão geral",
         "transactions": "Transações",
         "accounts": "Contas",
         "investments": "Investimentos",
@@ -11,8 +11,39 @@
         "myPrivileges": "Meus Privilégios",
         "settings": "Configurações"
     },
+    "settingsPage": {
+        "tabs": {
+            "editProfile": "Editar Perfil",
+            "preferences": "Preferências",
+            "security": "Segurança",
+            "settingTabs": "Abas de Configurações"
+        },
+        "profileForm": {
+            "yourName": "Seu Nome",
+            "userName": "Nome de Usuário",
+            "email": "Email",
+            "password": "Senha",
+            "dateOfBirth": "Data de Nascimento",
+            "presentAddress": "Endereço Atual",
+            "permanentAddress": "Endereço Permanente",
+            "city": "Cidade",
+            "postalCode": "Código Postal",
+            "country": "País",
+            "save": "Salvar",
+            "errors": {
+                "fieldRequired": "{field} é obrigatório",
+                "invalidField": "{field} inválido",
+                "mustContainLettersAndNumbers": "{field} deve conter letras e números",
+                "mustContainOnlyLettersAndNumbers": "{field} deve conter apenas letras e números",
+                "fieldMustContainAtLeast": "{field} deve conter pelo menos {min} caracteres"
+            }
+        }
+    },
     "overview": "Visão geral",
     "profilePicture": "Foto de Perfil",
     "searchForSomething": "Procure por algo",
-    "youHaveNoNewNotifications": "Você não tem novas notificações"
+    "youHaveNoNewNotifications": "Você não tem novas notificações",
+    "editMedia": "Editar Mídia",
+    "apply": "Aplicar",
+    "profilePictureUpdated": "Foto de perfil atualizada"
 }

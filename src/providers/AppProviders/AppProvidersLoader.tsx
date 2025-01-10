@@ -1,5 +1,5 @@
 import { headers } from "next/headers";
-import { useMessages } from "next-intl";
+import { useLocale, useMessages } from "next-intl";
 import { PropsWithChildren } from "react";
 
 import AppProviders from "./AppProviders";
@@ -26,9 +26,10 @@ function AppProvidersLoaderInternal({
   children,
 }: AppProvidersLoaderInternalProps) {
   const messages = useMessages();
+  const locale = useLocale();
 
   return (
-    <AppProviders messages={messages} userAgent={userAgent}>
+    <AppProviders messages={messages} userAgent={userAgent} locale={locale}>
       <MainLayout>{children}</MainLayout>
     </AppProviders>
   );

@@ -1,7 +1,7 @@
 {
     "drawer": {
         "soarTask": "Soar Task",
-        "dashboard": "Dashboard",
+        "dashboard": "Overview",
         "transactions": "Transactions",
         "accounts": "Accounts",
         "investments": "Investments",
@@ -11,8 +11,39 @@
         "myPrivileges": "My Privileges",
         "settings": "Settings"
     },
+    "settingsPage": {
+        "tabs": {
+            "editProfile": "Edit Profile",
+            "preferences": "Preferences",
+            "security": "Security",
+            "settingTabs": "Setting Tabs"
+        },
+        "profileForm": {
+            "yourName": "Your Name",
+            "userName": "User Name",
+            "email": "Email",
+            "password": "Password",
+            "dateOfBirth": "Date of Birth",
+            "presentAddress": "Present Address",
+            "permanentAddress": "Permanent Address",
+            "city": "City",
+            "postalCode": "Postal Code",
+            "country": "Country",
+            "save": "Salvar",
+            "errors": {
+                "fieldRequired": "{field} is required",
+                "invalidField": "Invalid {field}",
+                "mustContainLettersAndNumbers": "{field} must contain letters and numbers",
+                "mustContainOnlyLettersAndNumbers": "{field} must contain only letters and numbers",
+                "fieldMustContainAtLeast": "{field} must contain at least {min} characters"
+            }
+        }
+    },
     "overview": "Overview",
     "profilePicture": "Profile Picture",
     "searchForSomething": "Search for something",
-    "youHaveNoNewNotifications": "You have no new notifications"
+    "youHaveNoNewNotifications": "You have no new notifications",
+    "editMedia": "Edit Media",
+    "apply": "Apply",
+    "profilePictureUpdated": "Profile picture updated"
 }

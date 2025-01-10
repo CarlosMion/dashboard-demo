@@ -13,3 +13,39 @@ export interface User {
   country: string;
   profilePictureUrl?: string;
 }
+export interface CreditCard {
+  userId: string;
+  balance: number;
+  cardNumber: string;
+  expirationDate: string;
+}
+
+export interface RecentTransaction {
+  title: string;
+  source: string;
+  amount: number;
+  date: string;
+}
+
+export interface WeeklyActivity {
+  day: string;
+  deposit: number;
+  withdraw: number;
+}
+
+export interface ExpenseStatistic {
+  category: string;
+  percentage: number;
+}
+
+export interface Friend {
+  userId: string;
+  name: string;
+  headline: string;
+  pictureUrl: string;
+}
+
+export interface BalanceHistory {
+  date: string;
+  balance: number;
+}

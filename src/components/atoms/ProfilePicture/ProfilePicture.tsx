@@ -13,16 +13,16 @@ interface ProfilePictureProps {
   title?: string;
   fallBackSrc?: string;
   onClick?: () => void;
-  width?: number;
-  height?: number;
+  mobileSize?: number;
+  desktopSize?: number;
 }
 
 export default memo(function ProfilePicture({
   src,
   blurSrc,
   title,
-  width = 60,
-  height = 60,
+  mobileSize = 35,
+  desktopSize = 60,
   fallBackSrc,
   onClick,
 }: ProfilePictureProps) {
@@ -47,8 +47,8 @@ export default memo(function ProfilePicture({
 
   return (
     <StyledAvatar
-      width={width}
-      height={height}
+      mobilesize={mobileSize}
+      desktopsize={desktopSize}
       title={title}
       onClick={clickHandler}
     >
