@@ -6,6 +6,7 @@ import {
   Amount,
   TextContainer,
   IdentifierImg,
+  Row,
 } from "./styled";
 import { formatMoney, formatTransactionDate } from "@/utils/stringUtils";
 import { useMemo } from "react";
@@ -54,15 +55,17 @@ export default function TransactionItem({ transaction }: TransactionItemProps) {
 
   return (
     <Container>
-      <IdentifierImg bgcolor={imgBackgroundColor.get(transaction.source)}>
-        {IconComponent && <IconComponent />}
-      </IdentifierImg>
-      <TextContainer>
-        <Title variant="subtitle1">{transaction.title}</Title>
-        <Subtitle variant="body1">
-          {formatTransactionDate(transaction.date)}
-        </Subtitle>
-      </TextContainer>
+      <Row>
+        <IdentifierImg bgcolor={imgBackgroundColor.get(transaction.source)}>
+          {IconComponent && <IconComponent />}
+        </IdentifierImg>
+        <TextContainer>
+          <Title variant="subtitle1">{transaction.title}</Title>
+          <Subtitle variant="body1">
+            {formatTransactionDate(transaction.date)}
+          </Subtitle>
+        </TextContainer>
+      </Row>
       <Amount variant="subtitle1" direction={transactionDirection}>
         {formatMoney(transaction.amount)}
       </Amount>

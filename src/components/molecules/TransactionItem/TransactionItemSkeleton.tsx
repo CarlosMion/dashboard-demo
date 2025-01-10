@@ -17,10 +17,10 @@ export default function TransactionItemSkeleton() {
       </IdentifierImg>
       <TextContainer>
         <Title variant="subtitle1">
-          <Skeleton width="80%" />
+          <Skeleton width="80px" />
         </Title>
         <Subtitle variant="body1">
-          <Skeleton width="60%" />
+          <Skeleton width="60px" />
         </Subtitle>
       </TextContainer>
       <Amount variant="subtitle1" direction="income">

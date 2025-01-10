@@ -15,8 +15,16 @@ interface IdentifierImgProps {
 export const Container = styled(Stack)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
-  justifyContent: "start",
+  justifyContent: "space-between",
   width: "100%",
+  alignItems: "center",
+  gap: theme.spacing(2),
+}));
+
+export const Row = styled(Stack)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
   alignItems: "center",
   gap: theme.spacing(2),
 }));

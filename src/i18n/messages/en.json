@@ -59,5 +59,9 @@
     "youHaveNoNewNotifications": "You have no new notifications",
     "editMedia": "Edit Media",
     "apply": "Apply",
-    "profilePictureUpdated": "Profile picture updated"
+    "profilePictureUpdated": "Profile picture updated",
+    "writeAmount": "Write amount",
+    "send": "Send",
+    "moneySentSuccessfully": "Money sent successfully",
+    "amount": "Amount"
 }

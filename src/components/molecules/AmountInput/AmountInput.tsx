@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import React, { useCallback } from "react";
 import { slotProps, StyledTextField } from "./styled";
 
-type SearchTextFieldProps = {
+type AmountInputProps = {
   value?: string;
   autoFocus?: boolean;
   animate?: boolean;
@@ -15,14 +15,14 @@ type SearchTextFieldProps = {
   sx?: SxProps<Theme>;
 };
 
-export default function SearchTextField({
+export default function AmountInput({
   value,
   autoFocus,
   animate,
   onChange,
   onDismiss,
   sx,
-}: SearchTextFieldProps) {
+}: AmountInputProps) {
   const t = useTranslations();
 
   const changeHandler = useCallback(
@@ -60,7 +60,7 @@ export default function SearchTextField({
         autoFocus={autoFocus}
         className={animate ? "growIn" : undefined}
         sx={sx}
-        placeholder={t("searchForSomething")}
+        placeholder={t("amount")}
         slotProps={slotProps}
       />
     </ClickAwayListener>

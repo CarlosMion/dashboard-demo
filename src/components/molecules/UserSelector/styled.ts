@@ -7,7 +7,7 @@ import Stack from "@mui/material/Stack";
 export const Container = styled(Stack)({
   display: "flex",
   flexDirection: "column",
-  justifyContent: "start",
+  justifyContent: "center",
   width: "100%",
   alignItems: "center",
 });
@@ -16,8 +16,11 @@ export const Title = styled(Typography)(({ theme }) => ({
   paddingTop: theme.spacing(1.2),
   color: theme.palette.text.primary,
   fontWeight: 400,
+  textAlign: "center",
 }));
 
 export const Headline = styled(Typography)(({ theme }) => ({
   color: theme.palette.text.secondary,
+  lineHeight: 0.8,
+  textAlign: "center",
 }));

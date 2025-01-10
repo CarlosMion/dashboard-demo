@@ -15,6 +15,7 @@ import ChipCardIcon from "./ChipCardIcon";
 import BankIcon from "./BankIcon";
 import CardsIcon from "./CardsIcon";
 import UserTransactionIcon from "./UserTransactionIcon";
+import SendIcon from "./SendIcon";
 
 export {
   SoarTaskIcon,
@@ -34,4 +35,5 @@ export {
   BankIcon,
   CardsIcon,
   UserTransactionIcon,
+  SendIcon,
 };

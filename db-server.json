@@ -35,7 +35,7 @@
         {
             "userId": "1",
             "balance": 1000,
-            "cardNumber": 377856789012123,
+            "cardNumber": 3778567890121235,
             "expirationDate": "2022-12-22T00:00:00.000Z"
         },
         {
@@ -47,13 +47,13 @@
         {
             "userId": "1",
             "balance": 123.75,
-            "cardNumber": 913456789012421,
+            "cardNumber": 9134567890124215,
             "expirationDate": "2025-06-25T00:00:00.000Z"
         },
         {
             "userId": "1",
             "balance": 1000,
-            "cardNumber": 453456789012344,
+            "cardNumber": 4534567890123441,
             "expirationDate": "2029-11-29T00:00:00.000Z"
         }
     ],
