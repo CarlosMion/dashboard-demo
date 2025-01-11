@@ -9,7 +9,10 @@ interface AvatarProps {
 
 export const StyledAvatar = styled(Avatar)<AvatarProps>(
   ({ mobilesize, desktopsize, theme }) => ({
-    bgcolor: "transparent",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "transparent",
     width: useMediaQuery(theme.breakpoints.down("md"))
       ? mobilesize
       : desktopsize,
