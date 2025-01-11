@@ -1,6 +1,6 @@
 export const DEFAULT_USER_ID = "1";
 
-export const DRAWER_WIDTH_DESKTOP = "15.50rem";
+export const DRAWER_WIDTH_DESKTOP = "18.3rem";
 export const DRAWER_WIDTH_MOBILE = "30%";
 
 export const PLACEHOLDER_PROFILE_PICTURE =

@@ -12,6 +12,8 @@ export const Container = styled(Stack)(({ theme }) => ({
   gap: theme.spacing(1.25),
   flexDirection: "row",
   justifyContent: "start",
+  maxWidth: "18.3rem",
+  minWidth: "18.3rem",
   alignItems: "center",
   width: "100%",
   padding: useMediaQuery(theme.breakpoints.down("md"))
