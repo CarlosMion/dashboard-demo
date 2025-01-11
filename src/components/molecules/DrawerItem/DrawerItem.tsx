@@ -10,6 +10,7 @@ interface DrawerItemProps {
   title: string;
   isActive?: boolean;
   path: string;
+  onClick?: () => void;
 }
 
 export default function DrawerItem({
@@ -17,6 +18,7 @@ export default function DrawerItem({
   title,
   path,
   isActive = false,
+  onClick,
 }: DrawerItemProps) {
   const theme = useTheme();
   const IconComponent = icon ? Icons[icon] : null;
@@ -27,7 +29,7 @@ export default function DrawerItem({
   );
 
   return (
-    <Link href={path} prefetch>
+    <Link href={path} prefetch onClick={onClick}>
       <Container>
         {isActive && <ActiveIndicator />}
         {!!IconComponent && <IconComponent fill={fillColor} />}

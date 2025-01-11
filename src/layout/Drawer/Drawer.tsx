@@ -84,54 +84,63 @@ export default function Drawer({ toggleDrawer, isOpen = false }: DrawerProps) {
           title={t("dashboard")}
           path={homeUrl}
           isActive={activeTab === homeUrl}
+          onClick={toggleDrawer}
         />
         <DashboardItem
           icon="TransactionsIcon"
           title={t("transactions")}
           path={transactionsUrl}
           isActive={activeTab === transactionsUrl}
+          onClick={toggleDrawer}
         />
         <DashboardItem
           icon="AccountsIcon"
           title={t("accounts")}
           path={accountsUrl}
           isActive={activeTab === accountsUrl}
+          onClick={toggleDrawer}
         />
         <DashboardItem
           icon="InvestmentsIcon"
           title={t("investments")}
           path={investmentsUrl}
           isActive={activeTab === investmentsUrl}
+          onClick={toggleDrawer}
         />
         <DashboardItem
           icon="CreditCardIcon"
           title={t("creditCards")}
           path={creditCardsUrl}
           isActive={activeTab === creditCardsUrl}
+          onClick={toggleDrawer}
         />
         <DashboardItem
           icon="LoansIcon"
           title={t("loans")}
           path={loansUrl}
           isActive={activeTab === loansUrl}
+          onClick={toggleDrawer}
         />
         <DashboardItem
           icon="ServicesIcon"
           title={t("services")}
           path={servicesUrl}
           isActive={activeTab === servicesUrl}
+          onClick={toggleDrawer}
         />
         <DashboardItem
           icon="PrivilegesIcon"
           title={t("myPrivileges")}
           path={myPrivilegesUrl}
           isActive={activeTab === myPrivilegesUrl}
+          onClick={toggleDrawer}
         />
         <DashboardItem
           icon="SettingsSolidIcon"
           title={t("settings")}
           path={settingsUrl}
           isActive={activeTab === settingsUrl}
+          onClick={toggleDrawer}
         />
       </List>
     </StyledDrawer>

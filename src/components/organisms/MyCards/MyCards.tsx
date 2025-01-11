@@ -45,7 +45,7 @@ export default function MyCards() {
         style={{ width: "100%", flex: 1, display: "flex" }}
         breakpoints={{
           0: { slidesPerView: 1.4 },
-          1200: { slidesPerView: 2.1 },
+          1350: { slidesPerView: 2.1 },
           1900: { slidesPerView: 3 },
           2200: { slidesPerView: 3.5 },
           2500: { slidesPerView: 4 },
