@@ -1,10 +1,8 @@
 "use client";
 
-import { alpha, styled } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { IconButton } from "@mui/material";
 import { SwiperSlide } from "swiper/react";
 
 export const Container = styled(Stack)(({ theme }) => ({
