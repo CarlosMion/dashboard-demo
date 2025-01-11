@@ -112,16 +112,16 @@ Start the app:
 
 ## 🛠 Folder Structure
 
-/components        - Reusable UI components divided based on the atomic-design principle
-/app               - Next.js pages (routing)
-/constants         - Global constants
-/fonts             - Font configuration
-/api               - API-related files
-/layout            - Layout application files
-/providers         - Context for the application
-/theme             - MUI Theme configuration
-/types             - Interfaces
-/utils             - Utilities for the app
+- /components        - Reusable UI components divided based on the atomic-design principle
+- /app               - Next.js pages (routing)
+- /constants         - Global constants
+- /fonts             - Font configuration
+- /api               - API-related files
+- /layout            - Layout application files
+- /providers         - Context for the application
+- /theme             - MUI Theme configuration
+- /types             - Interfaces
+- /utils             - Utilities for the app
 
 ## 💡 Additional Notes
 	•	Code Quality: Linting and formatting are set up with ESLint and Prettier.
