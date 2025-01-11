@@ -91,7 +91,7 @@ This project uses concurrently to run both the Next.js app and the json-server.
 
 Start the app:
 
-`yarn dev`
+`yarn dev:server`
 
 	•	The Next.js app will run on `http://localhost:3000`.
 	•	The json-server will mock APIs on `http://localhost:3001`.
