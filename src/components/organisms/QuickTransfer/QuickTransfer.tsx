@@ -1,19 +1,12 @@
 "use client";
 
-import {
-  Text,
-  Container,
-  OptionsContainer,
-  FloatingButton,
-  Content,
-  Slide,
-} from "./styled";
+import { Text, Container, Content, Slide } from "./styled";
 import { useTranslations } from "next-intl";
 import { useGetFriendsQuery } from "@/api/requests/getFriends";
 import UserSelector from "@/components/molecules/UserSelector";
 import { UserSelectorSkeleton } from "@/components/molecules/UserSelector/UserSelectorSkeleton";
-import { ChevronRight } from "@mui/icons-material";
 import MoneyTransferInput from "@/components/molecules/MoneyTransferInput";
+import { Swiper } from "swiper/react";
 
 export default function QuickTransfer() {
   const t = useTranslations("dashboard");
@@ -24,7 +17,16 @@ export default function QuickTransfer() {
       <Text variant="h2">{t("quickTransfer")}</Text>
 
       <Content>
-        <OptionsContainer>
+        <Swiper
+          spaceBetween={20}
+          style={{ width: "100%", flex: 1, display: "flex" }}
+          breakpoints={{
+            0: { slidesPerView: 3 },
+            1350: { slidesPerView: 4 },
+            1650: { slidesPerView: 5 },
+            2200: { slidesPerView: 6 },
+          }}
+        >
           {isLoading
             ? Array.from({ length: 3 }).map((_, index) => (
                 <Slide key={index}>
@@ -32,15 +34,11 @@ export default function QuickTransfer() {
                 </Slide>
               ))
             : (friends || []).map((friend) => (
-                <UserSelector
-                  key={`user-selector-${friend.userId}`}
-                  user={friend}
-                />
+                <Slide key={`user-selector-${friend.userId}`}>
+                  <UserSelector user={friend} />
+                </Slide>
               ))}
-          <FloatingButton>
-            <ChevronRight />
-          </FloatingButton>
-        </OptionsContainer>
+        </Swiper>
         <MoneyTransferInput />
       </Content>
     </Container>

@@ -41,7 +41,6 @@ export default function MyCards() {
       </Header>
 
       <Swiper
-        // slidesPerView={"auto"}
         spaceBetween={20}
         style={{ width: "100%", flex: 1, display: "flex" }}
         breakpoints={{

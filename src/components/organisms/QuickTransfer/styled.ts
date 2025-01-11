@@ -20,24 +20,6 @@ export const Text = styled(Typography)(({ theme }) => ({
   color: theme.palette.text.title,
 }));
 
-export const OptionsContainer = styled(Stack)(({ theme }) => ({
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "center",
-  alignItems: "center",
-  height: "100%",
-  overflowX: "auto",
-  width: "100%",
-  gap: useMediaQuery(theme.breakpoints.down("md"))
-    ? theme.spacing(2.5)
-    : theme.spacing(3.75),
-  WebkitOverflowScrolling: "touch",
-}));
-
-export const FloatingButton = styled(IconButton)(({ theme }) => ({
-  boxShadow: `4px 4px 18px -2px ${alpha(theme.palette.grey[600], 0.5)}`,
-}));
-
 export const Content = styled(Stack)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
