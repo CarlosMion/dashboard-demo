@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner renders correctly and matches snapshot 1`] = `
+<svg
+  aria-busy="true"
+  aria-hidden="true"
+  class="MuiBox-root css-c2uxn6"
+  fill="none"
+  role="progressbar"
+  viewBox="0 0 30 30"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    stroke="#1814F3"
+    stroke-dasharray="94.248"
+    stroke-dashoffset="0"
+    stroke-linecap="round"
+    stroke-width="5"
+  >
+    <animatetransform
+      attributeName="transform"
+      dur="1s"
+      from="0 25 25"
+      repeatCount="indefinite"
+      to="360 25 25"
+      type="rotate"
+    />
+    <animate
+      attributeName="stroke-dashoffset"
+      dur="1s"
+      repeatCount="indefinite"
+      values="0;94.248"
+    />
+  </circle>
+</svg>
+`;

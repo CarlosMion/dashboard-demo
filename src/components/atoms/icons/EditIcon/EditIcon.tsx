@@ -9,7 +9,7 @@ export default function EditIcon({
 }: IconDefaultProps) {
   const theme = useTheme();
   return (
-    <SVGContainer width={width} height={height}>
+    <SVGContainer width={width} height={height} role="img" aria-hidden={true}>
       <circle cx="15" cy="15" r="15" fill={theme.palette.text.primary} />
       <g clipPath="url(#clip0_455_2335)">
         <path

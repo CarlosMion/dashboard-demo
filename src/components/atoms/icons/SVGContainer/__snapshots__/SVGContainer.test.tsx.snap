@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SVGContainer renders correctly and matches snapshot 1`] = `
+<svg
+  aria-busy="false"
+  aria-hidden="true"
+  class="MuiBox-root css-9uy14h"
+  fill="none"
+  role="img"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M0 0h24v24H0z"
+  />
+</svg>
+`;

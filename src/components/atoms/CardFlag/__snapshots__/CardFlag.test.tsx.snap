@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardFlag renders with default variant and matches snapshot 1`] = `
+<div
+  class="MuiStack-root css-z0b17m-MuiStack-root"
+  role="presentation"
+>
+  <div
+    class="MuiBox-root css-l5qrz5"
+    contrast="dark"
+  />
+  <div
+    class="MuiBox-root css-1e3monp"
+    contrast="dark"
+  />
+</div>
+`;
+
+exports[`CardFlag renders with light variant and matches snapshot 1`] = `
+<div
+  class="MuiStack-root css-z0b17m-MuiStack-root"
+  role="presentation"
+>
+  <div
+    class="MuiBox-root css-16wlxay"
+    contrast="light"
+  />
+  <div
+    class="MuiBox-root css-2qng6c"
+    contrast="light"
+  />
+</div>
+`;
