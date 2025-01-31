@@ -35,6 +35,7 @@ export default memo(function ProfilePicture({
   const handleError = useCallback(() => {
     setImageSrc(fallBackSrc || PLACEHOLDER_PROFILE_PICTURE);
   }, [fallBackSrc]);
+
   useEffect(() => {
     if (src) {
       setImageSrc(src);
@@ -45,12 +46,25 @@ export default memo(function ProfilePicture({
     onClick?.();
   }, [onClick]);
 
+  const handleKeyDown = useCallback(
+    (event: React.KeyboardEvent) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        onClick?.();
+      }
+    },
+    [onClick]
+  );
+
   return (
     <StyledAvatar
       mobilesize={mobileSize}
       desktopsize={desktopSize}
       title={title}
       onClick={clickHandler}
+      onKeyDown={handleKeyDown}
+      tabIndex={onClick ? 0 : undefined}
+      role={onClick ? "button" : undefined}
     >
       <Image
         src={imageSrc}
