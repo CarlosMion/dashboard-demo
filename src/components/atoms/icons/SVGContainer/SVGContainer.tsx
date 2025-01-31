@@ -4,16 +4,20 @@ import { PropsWithChildren, useMemo } from "react";
 import { Box, Theme, useMediaQuery } from "@mui/material";
 
 interface SVGContainerProps extends PropsWithChildren {
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
   fill?: string | null;
+  role?: string;
+  ariaBusy?: boolean;
 }
 
 export default function SVGContainer({
   children,
-  width,
-  height,
+  width = 24,
+  height = 24,
   fill = "none",
+  role = "img",
+  ariaBusy = false,
 }: SVGContainerProps) {
   const isMobile = useMediaQuery((theme: Theme) =>
     theme.breakpoints.down("md")
@@ -36,6 +40,9 @@ export default function SVGContainer({
       fill={fill || undefined}
       viewBox={`0 0 ${width} ${height}`}
       xmlns="http://www.w3.org/2000/svg"
+      role={role}
+      aria-busy={ariaBusy}
+      aria-hidden={true}
     >
       {children}
     </Box>

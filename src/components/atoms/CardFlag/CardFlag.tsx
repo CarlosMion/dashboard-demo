@@ -7,7 +7,7 @@ interface CardFlagProps {
 
 export default function CardFlag({ variant = "dark" }: CardFlagProps) {
   return (
-    <Container>
+    <Container role="presentation">
       <Circle contrast={variant} />
       <Circle contrast={variant} sx={{ left: "28%" }} />
     </Container>

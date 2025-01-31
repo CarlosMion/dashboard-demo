@@ -9,7 +9,12 @@ export default function Spinner({
 }: IconDefaultProps) {
   const theme = useTheme();
   return (
-    <SVGContainer width={width} height={height}>
+    <SVGContainer
+      width={width}
+      height={height}
+      role="progressbar"
+      ariaBusy={true}
+    >
       <circle
         cx="25"
         cy="25"
