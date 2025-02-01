@@ -43,7 +43,7 @@ export default function PieChartLabel({
       dominantBaseline="central"
       fontSize="smaller"
     >
-      {`${(percent * 100).toFixed(0)}%`}
+      {`${percent.toFixed(0)}%`}
       <tspan x={x} dy="1.2em">
         {name}
       </tspan>

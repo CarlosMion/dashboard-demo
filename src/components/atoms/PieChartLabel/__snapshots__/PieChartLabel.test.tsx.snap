@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PieChartLabel renders correctly and matches snapshot 1`] = `
+<span
+  dominant-baseline="central"
+  fill="#FFFFFF"
+  font-size="smaller"
+  text-anchor="middle"
+  x="0"
+  y="0"
+>
+  0%
+  <span
+    dy="1.2em"
+    x="0"
+  />
+</span>
+`;
