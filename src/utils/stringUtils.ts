@@ -11,6 +11,7 @@ export function formatValidThru(value: string): string {
   return new Date(value).toLocaleDateString("en-US", {
     month: "2-digit",
     year: "2-digit",
+    timeZone: "UTC",
   });
 }
 
@@ -19,5 +20,6 @@ export function formatTransactionDate(value: string): string {
     day: "2-digit",
     month: "long",
     year: "numeric",
+    timeZone: "UTC",
   });
 }
