@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders correctly and matches snapshot 1`] = `
+<div
+  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-i1p3el-MuiGrid2-root"
+  variant="dark"
+>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-9.5 css-1mbslpn-MuiGrid2-root"
+  >
+    <div
+      class="MuiStack-root css-1e6kwg5-MuiStack-root"
+    >
+      <h6
+        class="MuiTypography-root MuiTypography-subtitle2 css-1mlb6s-MuiTypography-root"
+        contrast="dark"
+      >
+        Balance
+      </h6>
+      <h6
+        class="MuiTypography-root MuiTypography-subtitle2 css-lgs5qv-MuiTypography-root"
+        contrast="dark"
+      >
+        $1,000.00
+      </h6>
+    </div>
+  </div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2.5 css-1ykqhke-MuiGrid2-root"
+  >
+    <svg
+      aria-busy="false"
+      aria-hidden="true"
+      class="MuiBox-root css-1736x1t"
+      fill="none"
+      role="img"
+      viewBox="0 0 34 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2.0261 0C0.897355 0 0 0.878681 0 1.98393V7.57193H10.1284C10.5817 6.55155 11.4275 5.73832 12.4787 5.29815V0H2.0261ZM13.2021 0V5.50499C13.2021 5.57804 13.179 5.64929 13.136 5.70897C13.093 5.76866 13.0322 5.81387 12.9619 5.83842C11.9124 6.20382 11.0834 7.01265 10.7084 8.03956C10.7079 8.04145 10.7074 8.04334 10.7069 8.04522C10.6724 8.14014 10.6418 8.23695 10.6151 8.33509C10.6147 8.33509 10.614 8.33862 10.6136 8.34004C10.5884 8.43308 10.5678 8.52787 10.55 8.62364C10.5486 8.63143 10.5464 8.63921 10.5451 8.64701C10.5307 8.72744 10.5208 8.80901 10.5119 8.89122C10.5094 8.91566 10.5049 8.93932 10.5027 8.96386C10.4939 9.06562 10.4893 9.16886 10.4893 9.27305V14.7255C10.4893 14.8297 10.4939 14.9329 10.5027 15.0347C10.5049 15.0591 10.5094 15.083 10.5119 15.1073C10.5208 15.1895 10.5307 15.2711 10.5451 15.3515C10.5465 15.3593 10.5487 15.3671 10.55 15.3749C10.5678 15.4707 10.5884 15.5655 10.6136 15.6585C10.614 15.6585 10.6147 15.662 10.6151 15.6635C10.6418 15.7616 10.6724 15.8584 10.7069 15.9533C10.7074 15.9547 10.7079 15.9561 10.7084 15.9576C10.7087 15.9576 10.7087 15.9576 10.7091 15.9611C11.0842 16.9876 11.9127 17.7963 12.962 18.1616C13.0322 18.1861 13.093 18.2313 13.136 18.291C13.179 18.3507 13.2021 18.422 13.2021 18.495V24H20.7979V18.495C20.7979 18.422 20.821 18.3507 20.864 18.291C20.907 18.2313 20.9678 18.1861 21.0381 18.1616C22.0876 17.7962 22.9166 16.9873 23.2917 15.9604C23.2921 15.9585 23.2926 15.9567 23.2931 15.9548C23.3276 15.8599 23.3582 15.7631 23.3849 15.6649C23.3853 15.6649 23.386 15.6614 23.3864 15.66C23.4116 15.5669 23.4322 15.4721 23.45 15.3763C23.4514 15.3685 23.4536 15.3607 23.4549 15.3529C23.4693 15.2726 23.4793 15.191 23.4881 15.1088C23.4907 15.0843 23.4951 15.0607 23.4973 15.0361C23.5061 14.9343 23.5107 14.8311 23.5107 14.7269V9.27451C23.5107 9.17031 23.5061 9.06707 23.4973 8.96531C23.4951 8.94087 23.4907 8.91703 23.4881 8.89267C23.4793 8.81046 23.4693 8.7289 23.4549 8.64847C23.4535 8.64067 23.4513 8.63288 23.45 8.62509C23.4322 8.52932 23.4116 8.43454 23.3864 8.3415C23.386 8.3415 23.3853 8.33795 23.3849 8.33654C23.3582 8.2384 23.3276 8.1416 23.2931 8.04668C23.2924 8.04456 23.2916 8.04244 23.2909 8.04031C22.9158 7.01379 22.0873 6.20513 21.0381 5.83983C20.9678 5.81529 20.907 5.77008 20.864 5.71039C20.821 5.6507 20.7979 5.57945 20.7979 5.50641V0.00141593H13.2021V0ZM21.5213 0V5.29815C22.5725 5.73832 23.4183 6.55155 23.8716 7.57193H34V1.98393C34 0.878681 33.1019 0 31.9732 0H21.5213ZM0 8.28029V15.718H9.88464C9.80748 15.4 9.76596 15.0681 9.76596 14.7254V9.27295C9.76596 8.93028 9.80748 8.59831 9.88464 8.28029H0ZM24.1154 8.28029C24.1925 8.59831 24.234 8.93028 24.234 9.27295V14.7254C24.234 15.0681 24.1925 15.4 24.1154 15.718H34V8.28029H24.1154ZM0 16.4264V22.0151C0 23.1203 0.897355 23.999 2.0261 23.999H12.4787V18.7002C11.4275 18.26 10.5817 17.4468 10.1284 16.4264H0ZM23.8716 16.4264C23.4183 17.4468 22.5725 18.26 21.5213 18.7002V23.999H31.9732C33.1019 23.999 34 23.1203 34 22.0151V16.4264H23.8716Z"
+        fill="#FFFFFF"
+      />
+    </svg>
+  </div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-5 css-ufm42q-MuiGrid2-root"
+  >
+    <div
+      class="MuiStack-root css-1e6kwg5-MuiStack-root"
+    >
+      <h6
+        class="MuiTypography-root MuiTypography-subtitle2 css-kauska-MuiTypography-root"
+        contrast="dark"
+      >
+        Card Holder
+      </h6>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-q6h62e-MuiTypography-root"
+        contrast="dark"
+      >
+        John Doe
+      </p>
+    </div>
+  </div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-5 css-uytjhf-MuiGrid2-root"
+  >
+    <div
+      class="MuiStack-root css-1e6kwg5-MuiStack-root"
+    >
+      <h6
+        class="MuiTypography-root MuiTypography-subtitle2 css-kauska-MuiTypography-root"
+        contrast="dark"
+      >
+        Valid Thru
+      </h6>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-q6h62e-MuiTypography-root"
+        contrast="dark"
+      >
+        12/25
+      </p>
+    </div>
+  </div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-1j0u08r-MuiGrid2-root"
+  >
+    <div
+      class="MuiStack-root css-1yya6cv-MuiStack-root"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-55a76y-MuiTypography-root"
+        contrast="dark"
+      >
+        4111 **** **** 1111
+      </p>
+      <div
+        class="MuiStack-root css-z0b17m-MuiStack-root"
+        role="presentation"
+      >
+        <div
+          class="MuiBox-root css-l5qrz5"
+          contrast="dark"
+        />
+        <div
+          class="MuiBox-root css-1e3monp"
+          contrast="dark"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

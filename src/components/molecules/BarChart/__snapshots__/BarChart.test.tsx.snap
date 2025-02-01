@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeeklyTransactionsBarChart renders correctly and matches snapshot 1`] = `
+<div
+  class="MuiBox-root css-1h8flee"
+>
+  <div>
+    <div>
+      <div>
+        CartesianGrid
+      </div>
+      <div>
+        XAxis
+      </div>
+      <div>
+        YAxis
+      </div>
+      <div>
+        Tooltip
+      </div>
+      <div>
+        Legend
+      </div>
+      <div>
+        Bar
+      </div>
+      <div>
+        Bar
+      </div>
+    </div>
+  </div>
+</div>
+`;

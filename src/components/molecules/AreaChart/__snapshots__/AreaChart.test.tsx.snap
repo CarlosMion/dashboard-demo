@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AreaChart renders correctly and matches snapshot 1`] = `
+<div
+  class="MuiBox-root css-1h8flee"
+>
+  <div>
+    <div>
+      <div>
+        CartesianGrid
+      </div>
+      <div>
+        XAxis
+      </div>
+      <div>
+        YAxis
+      </div>
+      <div>
+        Tooltip
+      </div>
+      <div>
+        Area
+      </div>
+      <span>
+        <span
+          id="colorGradient"
+          x1="0"
+          x2="0"
+          y1="0"
+          y2="1"
+        >
+          <span
+            offset="5%"
+            stop-color="#2D60FF"
+            stop-opacity="0.8"
+          />
+          <span
+            offset="95%"
+            stop-color="#2D60FF"
+            stop-opacity="0.1"
+          />
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;

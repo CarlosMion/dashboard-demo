@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardSkeleton renders correctly and matches snapshot 1`] = `
+<div
+  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-i1p3el-MuiGrid2-root"
+  variant="dark"
+>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-9.5 css-bcxyza-MuiGrid2-root"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-1mvk69b-MuiSkeleton-root"
+      style="width: 100px; height: 20px;"
+    />
+    <span
+      class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-w8k4ky-MuiSkeleton-root"
+      style="width: 100%; height: 15px;"
+    />
+  </div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2.5 css-1ykqhke-MuiGrid2-root"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-circular MuiSkeleton-pulse css-26dym8-MuiSkeleton-root"
+      style="width: 40px; height: 30px;"
+    />
+  </div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-5 css-ufm42q-MuiGrid2-root"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-1mvk69b-MuiSkeleton-root"
+      style="width: 100px; height: 20px;"
+    />
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-1mvk69b-MuiSkeleton-root"
+      style="width: 80%; height: 20px;"
+    />
+  </div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-5 css-uytjhf-MuiGrid2-root"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-1mvk69b-MuiSkeleton-root"
+      style="width: 100px; height: 20px;"
+    />
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-1mvk69b-MuiSkeleton-root"
+      style="width: 80%; height: 20px;"
+    />
+  </div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-1j0u08r-MuiGrid2-root"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-pr39we-MuiSkeleton-root"
+      style="width: 100%; height: 30px;"
+    />
+  </div>
+</div>
+`;
